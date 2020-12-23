@@ -1,0 +1,112 @@
+.first {
+  background-color: $blue;
+  padding: 47px 0;
+  background-image: url("../../img/bg/bg-image.png");
+  background-position: right 0% bottom 68%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 25%;
+    display: block;
+    background-image: url("../../img/icons/barry1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-barry-first;
+    width: 220px;
+    height: 208px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 19%;
+    right: 4%;
+    display: block;
+    background-image: url("../../img/icons/leaf1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-barry-first;
+    width: 236px;
+    height: 203px;
+  }
+}
+.first__container {
+  height: 100%;
+  display: flex;
+}
+.first__content {
+  display: flex;
+  // align-items: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -6%;
+    left: 3%;
+    display: block;
+    background-image: url("../../img/icons/leaf3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-barry-first;
+    width: 59px;
+    height: 112px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 28%;
+    display: block;
+    background-image: url("../../img/icons/leaf2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-barry-first;
+    width: 141px;
+    height: 102px;
+  }
+}
+.first__column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  &:last-child {
+    // margin-right: 0;
+    justify-content: center;
+  }
+}
+.first__desc {
+  margin-bottom: 32px;
+}
+.first__title {
+  margin-bottom: 23px;
+}
+.first__text {
+  @include alegreya-sans(normal);
+  font-size: 21px;
+  color: $white;
+  width: 80%;
+}
+.first__btn {
+  display: flex;
+  margin-bottom: 72px;
+}
+.first__img {
+  width: 100%;
+  height: 100%;
+
+  & img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+  }
+}

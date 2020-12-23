@@ -1,0 +1,18 @@
+.feature {
+  display: flex;
+}
+.feature__img {
+  width: 50px;
+  height: 42px;
+  color: $light-blue;
+  margin-right: 7px;
+}
+.feature__desc {
+  @include alegreya-sans(normal);
+  font-size: 16px;
+  color: $white;
+
+  & p {
+    display: block;
+  }
+}
