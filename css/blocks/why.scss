@@ -1,0 +1,83 @@
+.why {
+  background-color: $white;
+  background-image: url("../../img/bg/bg-image-why.png");
+  background-position: left 0 center;
+  background-repeat: no-repeat;
+  background-size: initial;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8%;
+    right: 10%;
+    display: block;
+    background-image: url("../../img/icons/barry2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-barry-first;
+    width: 111px;
+    height: 108px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -14%;
+    left: 0%;
+    display: block;
+    background-image: url("../../img/icons/barry3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-barry-first;
+    width: 161px;
+    height: 315px;
+  }
+}
+.why__container {
+  height: 100%;
+  display: flex;
+}
+.why__content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.why__title {
+  margin-bottom: 25px;
+}
+.why__subtitle {
+  @include alegreya-sans(normal);
+  font-size: 18px;
+  color: $grey;
+  width: 43%;
+  text-align: center;
+  margin-bottom: 57px;
+}
+.why__list {
+  display: flex;
+  justify-content: space-between;
+}
+.why__item {
+  width: calc(100%/3);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/icons/ellipse.png");
+    width: 67px;
+    height: 21px;
+    top: 20%;
+    right: 0%;
+    transform: translateX(50%);
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}

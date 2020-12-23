@@ -34,7 +34,7 @@
 	font-family: 'Alegreya-sans';
 	src: url('../../fonts/alegreyasans-regular-webfont.woff2') format('woff2'),
          url('../../fonts/alegreyasans-regular-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
@@ -61,9 +61,9 @@
 		font-weight: 500;
 	}
 	@if $weight == bold {
-		font-weight: bold;
+		font-weight: 600;
 	}
 	@if $weight == extrabold {
-		font-weight: bold;
+		font-weight: 800;
 	}
 }
