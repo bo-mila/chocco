@@ -16,6 +16,8 @@ $biruse: #d2ddd9;
 $z-fixed-menu: 10;
 $z-header: 1;
 $z-barry-first: 3;
+$z-bg-image-review: 3;
+$z-title-reviews: 4;
 
 @import "./_misc/normalize.scss";
 @import "./_misc/fonts.scss";
@@ -32,3 +34,5 @@ $z-barry-first: 3;
 @import "./blocks/feature.scss";
 @import "./blocks/why.scss";
 @import "./blocks/why-desc.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/review.scss";
