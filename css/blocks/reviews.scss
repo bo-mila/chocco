@@ -12,10 +12,10 @@
     top: 5%;
     right: 3%;
     display: block;
-    background-image: url("../../img/icons/barry4.png");
+    background-image: url("../../img/icons/barry-bef-reviews.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: $z-barry-first;
+    z-index: $z-bef-af-section;
     width: 150px;
     height: 86px;
   }
@@ -26,10 +26,10 @@
     bottom: -10%;
     left: 0%;
     display: block;
-    background-image: url("../../img/icons/barry5.png");
+    background-image: url("../../img/icons/barry-af-reviews.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: $z-barry-first;
+    z-index: $z-bef-af-section;
     width: 135px;
     height: 193px;
   }

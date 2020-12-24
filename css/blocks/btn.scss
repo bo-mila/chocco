@@ -7,4 +7,14 @@
   text-transform: uppercase;
   border-radius: 30px;
   display: flex;
+
+  &--bg-green {
+    background-color: $green;
+    color: $white;
+  }
+
+  &--transp {
+    background-color: transparent;
+    color: $black;
+  }
 }

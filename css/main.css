@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -527,7 +528,7 @@ table {
     bottom: 10%;
     right: 25%;
     display: block;
-    background-image: url("../../img/icons/barry1.png");
+    background-image: url("../../img/icons/barry-first.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -539,7 +540,7 @@ table {
     bottom: 19%;
     right: 4%;
     display: block;
-    background-image: url("../../img/icons/leaf1.png");
+    background-image: url("../../img/icons/leaf-first.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -562,7 +563,7 @@ table {
     bottom: -6%;
     left: 2%;
     display: block;
-    background-image: url("../../img/icons/leaf3.png");
+    background-image: url("../../img/icons/leaf-bef-first-content.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -574,7 +575,7 @@ table {
     bottom: 0;
     right: 28%;
     display: block;
-    background-image: url("../../img/icons/leaf2.png");
+    background-image: url("../../img/icons/leaf-af-first-content.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -653,6 +654,12 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .btn--bg-green {
+    background-color: #365a49;
+    color: #fff; }
+  .btn--transp {
+    background-color: transparent;
+    color: #000; }
 
 .features__list {
   display: -webkit-box;
@@ -697,7 +704,7 @@ table {
     top: -8%;
     right: 10%;
     display: block;
-    background-image: url("../../img/icons/barry2.png");
+    background-image: url("../../img/icons/barry-bef-why.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -709,7 +716,7 @@ table {
     bottom: -14%;
     left: 0%;
     display: block;
-    background-image: url("../../img/icons/barry3.png");
+    background-image: url("../../img/icons/barry-af-why.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -836,7 +843,7 @@ table {
     top: 5%;
     right: 3%;
     display: block;
-    background-image: url("../../img/icons/barry4.png");
+    background-image: url("../../img/icons/barry-bef-reviews.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -848,7 +855,7 @@ table {
     bottom: -10%;
     left: 0%;
     display: block;
-    background-image: url("../../img/icons/barry5.png");
+    background-image: url("../../img/icons/barry-af-reviews.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
@@ -1002,3 +1009,236 @@ table {
   font-weight: 500;
   font-size: 18px;
   color: #000; }
+
+.order {
+  background-color: #d2ddd9;
+  background-image: url("../../img/bg/bg-pattern-order.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .order::before {
+    content: "";
+    position: absolute;
+    top: -22%;
+    right: -5%;
+    display: block;
+    background-image: url("../../img/icons/barry-bef-order.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    width: 240px;
+    height: 260px; }
+  .order::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 1%;
+    display: block;
+    background-image: url("../../img/icons/leaf-af-order.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    width: 135px;
+    height: 188px; }
+
+.order__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.order__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%; }
+  .order__content::after {
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    left: 2%;
+    display: block;
+    background-image: url("../../img/icons/barry-af-order-content.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    width: 47px;
+    height: 48px; }
+
+.order__title {
+  margin-bottom: 55px; }
+
+.form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.form__col {
+  width: calc(100%/2 - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 20px; }
+  .form__col:last-child {
+    margin-right: 0; }
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 20px; }
+  .form__row:last-child {
+    margin-bottom: 0; }
+
+.form__block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 20px;
+  width: 100%;
+  color: #365a49; }
+  .form__block:last-child {
+    margin-right: 0; }
+
+.form__subtitle {
+  font-family: 'Alegreya-sans', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+.form__input {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  width: 100%;
+  background: #fff;
+  border-radius: 1px;
+  border: solid 3px transparent;
+  outline: none;
+  padding: 11px 22px;
+  color: #000; }
+  .form__input:focus {
+    border-color: #dee2bd; }
+
+.form__input--textarea {
+  height: 180px;
+  resize: vertical;
+  border: 3px solid transparent;
+  outline: none; }
+  .form__input--textarea:focus {
+    border-color: #dee2bd; }
+
+.form__option {
+  margin-right: 23px;
+  cursor: pointer; }
+  .form__option:last-child {
+    margin-right: 0; }
+
+.option__radio {
+  display: none; }
+  .option__radio:checked ~ .option__title {
+    color: #365a49; }
+    .option__radio:checked ~ .option__title::after {
+      display: block; }
+    .option__radio:checked ~ .option__title::before {
+      border-color: #dee2bd; }
+
+.option__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #365a49;
+  font-family: 'Alegreya-sans', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+  .option__title::before {
+    content: "";
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 27px;
+    height: 27px;
+    background-color: #fff;
+    border-radius: 50%; }
+  .option__title:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4%;
+    top: 24%;
+    width: 14px;
+    height: 14px;
+    background-color: #365a49;
+    border-radius: 50%; }
+
+.check__checkbox {
+  display: none; }
+  .check__checkbox:checked ~ .check__title {
+    color: #365a49; }
+    .check__checkbox:checked ~ .check__title::before {
+      border-color: #dee2bd; }
+
+.check__title {
+  font-family: 'Alegreya-sans', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  color: #365a49;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .check__title::before {
+    content: "";
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }

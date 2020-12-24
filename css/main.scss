@@ -12,10 +12,12 @@ $light-grey-bg: #f2f5f4;
 $light-grey: #f3f5f3;
 $light-light-grey: #f8faf9;
 $biruse: #d2ddd9;
+$yellow: #dee2bd;
 
 $z-fixed-menu: 10;
 $z-header: 1;
-$z-barry-first: 3;
+$z-bef-af-section: 3;
+$z-bef-af-first-content: 3;
 $z-bg-image-review: 3;
 $z-title-reviews: 4;
 
@@ -36,3 +38,5 @@ $z-title-reviews: 4;
 @import "./blocks/why-desc.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/review.scss";
+@import "./blocks/order.scss";
+@import "./blocks/form.scss";

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 @font-face {
 	font-family: 'Alegreya-sans';
 	src: url('../../fonts/alegreyasans-extrabold-webfont.woff2') format('woff2'),
@@ -66,4 +68,8 @@
 	@if $weight == extrabold {
 		font-weight: 800;
 	}
+}
+@mixin open-sans() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
 }

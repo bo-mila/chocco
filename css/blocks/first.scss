@@ -13,10 +13,10 @@
     bottom: 10%;
     right: 25%;
     display: block;
-    background-image: url("../../img/icons/barry1.png");
+    background-image: url("../../img/icons/barry-first.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: $z-barry-first;
+    z-index: $z-bef-af-section;
     width: 220px;
     height: 208px;
   }
@@ -27,10 +27,10 @@
     bottom: 19%;
     right: 4%;
     display: block;
-    background-image: url("../../img/icons/leaf1.png");
+    background-image: url("../../img/icons/leaf-first.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: $z-barry-first;
+    z-index: $z-bef-af-section;
     width: 236px;
     height: 203px;
   }
@@ -49,10 +49,10 @@
     bottom: -6%;
     left: 2%;
     display: block;
-    background-image: url("../../img/icons/leaf3.png");
+    background-image: url("../../img/icons/leaf-bef-first-content.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: $z-barry-first;
+    z-index: $z-bef-af-first-content;
     width: 59px;
     height: 112px;
   }
@@ -63,10 +63,10 @@
     bottom: 0;
     right: 28%;
     display: block;
-    background-image: url("../../img/icons/leaf2.png");
+    background-image: url("../../img/icons/leaf-af-first-content.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: $z-barry-first;
+    z-index: $z-bef-af-first-content;
     width: 141px;
     height: 102px;
   }
