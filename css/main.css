@@ -375,7 +375,8 @@ p {
 html, body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  position: relative; }
 
 .wrapper {
   overflow: hidden;
@@ -415,7 +416,8 @@ html, body {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -444,11 +446,10 @@ table {
 .header {
   position: absolute;
   z-index: 1;
-  top: 0;
   left: 0;
   width: 100%;
   color: #fff;
-  padding-top: 24px; }
+  top: 24px; }
 
 .header__container {
   display: -webkit-box;
