@@ -1,0 +1,14 @@
+.nav {
+  @include alegreya-sans(normal);
+  font-size: 18px;
+  line-height: 1;
+}
+.nav__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__item {
+  cursor: pointer;
+}

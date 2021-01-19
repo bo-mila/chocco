@@ -1,0 +1,18 @@
+.contacts {
+  @include alegreya-sans (normal);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 11px;
+    background-image: url("../../img/icons/phone.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // display: block;
+    margin-right: 6px;
+  }
+}

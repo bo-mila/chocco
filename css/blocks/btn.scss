@@ -1,0 +1,20 @@
+.btn {
+  @include alegreya-sans(extrabold);
+  font-size: 19px;
+  padding: 20px 35px;
+  background-color: $white;
+  color: $green;
+  text-transform: uppercase;
+  border-radius: 30px;
+  display: flex;
+
+  &--bg-green {
+    background-color: $green;
+    color: $white;
+  }
+
+  &--transp {
+    background-color: transparent;
+    color: $black;
+  }
+}

@@ -1,0 +1,64 @@
+.order {
+  background-color: $biruse;
+  background-image: url("../../img/bg/bg-pattern-order.png");
+  // background-position: left 0% bottom -40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -22%;
+    right: -5%;
+    display: block;
+    background-image: url("../../img/icons/barry-bef-order.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: 240px;
+    height: 260px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 1%;
+    display: block;
+    background-image: url("../../img/icons/leaf-af-order.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: 135px;
+    height: 188px;
+  }
+}
+.order__container {
+  height: 100%;
+  display: flex;
+}
+.order__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    left: 2%;
+    display: block;
+    background-image: url("../../img/icons/barry-af-order-content.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: 47px;
+    height: 48px;
+  }
+}
+.order__title {
+  margin-bottom: 55px;
+}
