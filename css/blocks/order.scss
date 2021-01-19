@@ -16,8 +16,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 240px;
-    height: 260px;
+    width: rem(240px);
+    height: rem(260px);
   }
 
   &::after {
@@ -30,8 +30,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 135px;
-    height: 188px;
+    width: rem(135px);
+    height: rem(188px);
   }
 }
 .order__container {
@@ -55,10 +55,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 47px;
-    height: 48px;
+    width: rem(47px);
+    height: rem(48px);
   }
 }
 .order__title {
-  margin-bottom: 55px;
+  margin-bottom: rem(55px);
 }

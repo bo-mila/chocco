@@ -1,6 +1,6 @@
 .first {
   background-color: $blue;
-  padding: 47px 0;
+  padding: rem(47px) 0;
   background-image: url("../../img/bg/bg-image.png");
   background-position: right 0% bottom 68%;
   background-repeat: no-repeat;
@@ -17,8 +17,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 220px;
-    height: 208px;
+    width: rem(220px);
+    height: rem(208px);
   }
 
   &::after {
@@ -31,8 +31,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 236px;
-    height: 203px;
+    width: rem(236px);
+    height: rem(203px);
   }
 }
 .first__container {
@@ -53,8 +53,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-first-content;
-    width: 59px;
-    height: 112px;
+    width: rem(59px);
+    height: rem(112px);
   }
 
   &::after {
@@ -67,8 +67,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-first-content;
-    width: 141px;
-    height: 102px;
+    width: rem(141px);
+    height: rem(102px);
   }
 }
 .first__column {
@@ -83,20 +83,20 @@
   }
 }
 .first__desc {
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
 }
 .first__title {
-  margin-bottom: 23px;
+  margin-bottom: rem(23px);
 }
 .first__text {
   @include alegreya-sans(normal);
-  font-size: 21px;
+  font-size: rem(21px);
   color: $white;
   width: 80%;
 }
 .first__btn {
   display: flex;
-  margin-bottom: 72px;
+  margin-bottom: rem(72px);
 }
 .first__img {
   width: 100%;

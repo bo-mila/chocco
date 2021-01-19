@@ -1,6 +1,6 @@
 .nav {
   @include alegreya-sans(normal);
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 1;
 }
 .nav__list {

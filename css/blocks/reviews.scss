@@ -16,8 +16,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 150px;
-    height: 86px;
+    width: rem(150px);
+    height: rem(86px);
   }
 
   &::after {
@@ -30,8 +30,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: 135px;
-    height: 193px;
+    width: rem(135px);
+    height: rem(193px);
   }
 }
 .reviews__container {
@@ -45,12 +45,12 @@
   flex-direction: column;
 }
 .reviews__title {
-  margin-bottom: 44px;
+  margin-bottom: rem(44px);
   z-index: $z-title-reviews;
 }
 .reviews__list {
   display: flex;
-  margin-bottom: 22px;
+  margin-bottom: rem(22px);
 }
 .reviews__item {
   width: 100%;
@@ -65,12 +65,12 @@
   justify-content: center;
 }
 .reviews__item-btn {
-  width: 66px;
-  height: 66px;
+  width: rem(66px);
+  height: rem(66px);
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid transparent;
-  margin-right: 5px;
+  border: rem(5px) solid transparent;
+  margin-right: rem(5px);
 
   &:last-child {
     margin-right: 0;

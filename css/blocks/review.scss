@@ -1,5 +1,5 @@
 .review {
-  padding: 51px 45px 35px;
+  padding: rem(51px) rem(45px) rem(35px);
   background-color: $light-light-grey;
   position: relative;
   
@@ -13,8 +13,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bg-image-review;
-    width: 127px;
-    height: 167px;
+    width: rem(127px);
+    height: rem(167px);
   }
 
   &::after {
@@ -25,16 +25,16 @@
     transform: translate(-50%,-65%);
     background-color: $white;
     border-radius: 50%;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
   }
 }
 .review__avatar {
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 .review__photo {
-  width: 253px;
-  height: 259px;
+  width: rem(253px);
+  height: rem(259px);
   overflow: hidden;
 }
 .review__img {
@@ -51,19 +51,19 @@
 }
 .review__title {
   @include alegreya-sans(bold);
-  font-size: 30px;
-  margin-bottom: 29px;
+  font-size: rem(30px);
+  margin-bottom: rem(29px);
 }
 .review__text {
   @include alegreya-sans(normal);
-  font-size: 18px;
+  font-size: rem(18px);
   color: $grey;
   width: 76%;
   line-height: 1;
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
 }
 .review__name {
   @include alegreya-sans(medium);
-  font-size: 18px;
+  font-size: rem(18px);
   color: $black;
 }
