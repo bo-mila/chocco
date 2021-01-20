@@ -11,12 +11,15 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding-right: rem(20px);
 }
 .header__logo {
-  margin-right: rem(44px);
+  margin-right: rem(20px);
 }
 .header__nav {
   flex: 1;
-  margin-right: rem(44px);
+  margin-right: rem(20px);
+  @include tablets {
+    display: none;
+  }
+  
 }

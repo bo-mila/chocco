@@ -12,4 +12,7 @@
   &--green {
     color: $green;
   }
+  @include tablets {
+    font-size: rem(42px);
+  }
 }

@@ -1,8 +1,11 @@
-.contacts {
+.phones {
   @include alegreya-sans (normal);
   font-size: rem(24px);
   display: flex;
   align-items: center;
+  @include tablets {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -13,6 +16,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     // display: block;
-    margin-right: rem(6px);
+    margin-right: rem(4px);
   }
 }

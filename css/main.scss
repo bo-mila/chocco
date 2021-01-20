@@ -19,7 +19,8 @@ $z-header: 1;
 $z-bef-af-section: 3;
 $z-bef-af-first-content: 3;
 $z-bg-image-review: 3;
-$z-title-reviews: 4;
+$z-title-reviews: 8;
+$z-form: 10;
 
 @import "./_misc/normalize.scss";
 @import "./_misc/media.scss";
@@ -29,7 +30,8 @@ $z-title-reviews: 4;
 
 @import "./blocks/header.scss";
 @import "./blocks/nav.scss";
-@import "./blocks/contacts.scss";
+@import "./blocks/phones.scss";
+@import "./blocks/hamburger-menu-link.scss";
 @import "./blocks/first.scss";
 @import "./blocks/title.scss";
 @import "./blocks/btn.scss";

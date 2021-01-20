@@ -5,6 +5,7 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
+  z-index: $z-form;
 }
 .form__col {
   width: calc(100%/2 - 20px);
@@ -67,7 +68,7 @@
   }
  }
  .form__option {
-   margin-right: rem(23px);
+   margin-right: rem(15px);
    cursor: pointer;
 
    &:last-child {
@@ -100,9 +101,9 @@
   &::before {
     content: "";
     flex-shrink: 0;
-    margin-right: rem(10px);
-    width: rem(27px);
-    height: rem(27px);
+    margin-right: rem(5px);
+    width: rem(26px);
+    height: rem(26px);
     background-color: $white;
     border-radius: 50%;
   }

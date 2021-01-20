@@ -11,4 +11,9 @@
 }
 .nav__item {
   cursor: pointer;
+  text-align: center;
+  margin-right: rem(5px);
+  &:last-child {
+    margin-right: 0;
+  }
 }
