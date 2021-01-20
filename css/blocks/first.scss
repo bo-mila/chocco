@@ -6,7 +6,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-
+  @include tablets {
+    background-size: 61%;
+    background-position: right 0% top 17%;
+  }
   
 
  
@@ -98,7 +101,7 @@
     }
     @include tablets {
       width: 62%;
-      margin-bottom: rem(18px);
+      margin-bottom: rem(12px);
     }
     
     &::after {

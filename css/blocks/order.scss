@@ -18,6 +18,12 @@
     z-index: $z-bef-af-section;
     width: rem(240px);
     height: rem(260px);
+    @include tablets {
+      width: rem(180px);
+      height: rem(200px);
+      top: -15%;
+      right: -7%;
+    }
   }
 
   &::after {
@@ -32,6 +38,9 @@
     z-index: $z-bef-af-section;
     width: rem(135px);
     height: rem(188px);
+    @include tablets {
+      display: none;
+    }
   }
 }
 .order__container {
@@ -57,8 +66,14 @@
     z-index: $z-bef-af-section;
     width: rem(47px);
     height: rem(48px);
+    @include tablets {
+      display: none;
+    }
   }
 }
 .order__title {
   margin-bottom: rem(55px);
+  @include tablets {
+    margin-bottom: rem(25px);
+  }
 }
