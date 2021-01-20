@@ -5,7 +5,10 @@
   background-repeat: no-repeat;
   background-size: initial;
   position: relative;
+  @include tablets {
+    background-position: left -2% top 12%;
 
+  }
   
 
   &::after {
@@ -20,6 +23,9 @@
     z-index: $z-bef-af-section;
     width: rem(161px);
     height: rem(315px);
+    @include tablets {
+      left: -5%;
+    }
   }
 }
 .why__container {
@@ -43,6 +49,10 @@
   width: 43%;
   text-align: center;
   margin-bottom: rem(57px);
+  @include tablets {
+    margin-bottom: rem(40px);
+    width: 62%;
+  }
 }
 .why__list {
   display: flex;
@@ -61,6 +71,9 @@
     top: 20%;
     right: 0%;
     transform: translateX(50%);
+    @include tablets {
+      display: none;
+    }
   }
 
   &:last-child {

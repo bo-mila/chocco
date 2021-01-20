@@ -840,6 +840,9 @@ table {
   background-repeat: no-repeat;
   background-size: initial;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .why {
+      background-position: left -2% top 12%; } }
   .why::after {
     content: "";
     position: absolute;
@@ -852,6 +855,9 @@ table {
     z-index: 3;
     width: 10.0625rem;
     height: 19.6875rem; }
+    @media screen and (max-width: 768px) {
+      .why::after {
+        left: -5%; } }
 
 .why__container {
   height: 100%;
@@ -886,6 +892,10 @@ table {
   width: 43%;
   text-align: center;
   margin-bottom: 3.5625rem; }
+  @media screen and (max-width: 768px) {
+    .why__subtitle {
+      margin-bottom: 2.5rem;
+      width: 62%; } }
 
 .why__list {
   display: -webkit-box;
@@ -909,6 +919,9 @@ table {
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
     transform: translateX(50%); }
+    @media screen and (max-width: 768px) {
+      .why__item::after {
+        display: none; } }
   .why__item:last-child::after {
     display: none; }
 
