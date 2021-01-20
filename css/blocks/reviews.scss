@@ -1,9 +1,5 @@
 .reviews {
   background-color: $white;
-  background-image: url("../../img/bg/bg-image-reviews.png");
-  background-position: left 0% bottom -40%;
-  background-repeat: no-repeat;
-  background-size: initial;
   position: relative;
 
   &::before {
@@ -18,21 +14,33 @@
     z-index: $z-bef-af-section;
     width: rem(150px);
     height: rem(86px);
+    @include tablets {
+      width: rem(113px);
+      height: rem(79px);
+      right: -5%;
+    }
   }
-
   &::after {
     content: "";
     position: absolute;
-    bottom: -10%;
+    bottom: -24%;
     left: 0%;
     display: block;
-    background-image: url("../../img/icons/barry-af-reviews.png");
+    background-image: url("../../img/bg/bg-image-reviews.png");
+    background-position: left 0% bottom -40%;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-section;
-    width: rem(135px);
-    height: rem(193px);
+    width: rem(102px);
+    height: rem(321px);
+    @include tablets {
+      bottom: -9%;
+      width: rem(76px);
+      height: rem(317px);
+    }
   }
+  
+  
 }
 .reviews__container {
   height: 100%;
@@ -43,6 +51,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 .reviews__title {
   margin-bottom: rem(44px);
@@ -51,6 +60,9 @@
 .reviews__list {
   display: flex;
   margin-bottom: rem(22px);
+  @include tablets {
+    width: 95%;
+  }
 }
 .reviews__item {
   width: 100%;
@@ -58,6 +70,11 @@
 
   &--active {
     display: flex;
+    @include tablets {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 .reviews__list-btns {

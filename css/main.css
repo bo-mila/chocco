@@ -975,10 +975,6 @@ table {
 
 .reviews {
   background-color: #fff;
-  background-image: url("../../img/bg/bg-image-reviews.png");
-  background-position: left 0% bottom -40%;
-  background-repeat: no-repeat;
-  background-size: initial;
   position: relative; }
   .reviews::before {
     content: "";
@@ -992,18 +988,29 @@ table {
     z-index: 3;
     width: 9.375rem;
     height: 5.375rem; }
+    @media screen and (max-width: 768px) {
+      .reviews::before {
+        width: 7.0625rem;
+        height: 4.9375rem;
+        right: -5%; } }
   .reviews::after {
     content: "";
     position: absolute;
-    bottom: -10%;
+    bottom: -24%;
     left: 0%;
     display: block;
-    background-image: url("../../img/icons/barry-af-reviews.png");
+    background-image: url("../../img/bg/bg-image-reviews.png");
+    background-position: left 0% bottom -40%;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
-    width: 8.4375rem;
-    height: 12.0625rem; }
+    width: 6.375rem;
+    height: 20.0625rem; }
+    @media screen and (max-width: 768px) {
+      .reviews::after {
+        bottom: -9%;
+        width: 4.75rem;
+        height: 19.8125rem; } }
 
 .reviews__container {
   height: 100%;
@@ -1035,6 +1042,9 @@ table {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.375rem; }
+  @media screen and (max-width: 768px) {
+    .reviews__list {
+      width: 95%; } }
 
 .reviews__item {
   width: 100%;
@@ -1043,6 +1053,18 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media screen and (max-width: 768px) {
+      .reviews__item--active {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; } }
 
 .reviews__list-btns {
   display: -webkit-box;
@@ -1103,11 +1125,19 @@ table {
 
 .review__avatar {
   margin-right: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .review__avatar {
+      margin-right: 0;
+      margin-bottom: 1.9375rem; } }
 
 .review__photo {
   width: 15.8125rem;
   height: 16.1875rem;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .review__photo {
+      width: 8.125rem;
+      height: 8.3125rem; } }
 
 .review__img {
   width: 100%;
@@ -1131,6 +1161,9 @@ table {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .review__desc {
+      text-align: center; } }
 
 .review__title {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
@@ -1146,12 +1179,34 @@ table {
   width: 76%;
   line-height: 1;
   margin-bottom: 2rem; }
+  @media screen and (max-width: 768px) {
+    .review__text {
+      width: 100%; } }
 
 .review__name {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
   color: #000; }
+
+.how-work {
+  background-color: #f8faf9;
+  position: relative; }
+  .how-work::before {
+    content: "";
+    position: absolute;
+    top: -13%;
+    left: 0%;
+    display: block;
+    background-image: url("../../img/icons/barry-af-reviews.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    width: 8.4375rem;
+    height: 12.0625rem; }
+    @media screen and (max-width: 768px) {
+      .how-work::before {
+        left: -4%; } }
 
 .order {
   background-color: #d2ddd9;
