@@ -1035,9 +1035,22 @@ table {
         width: 5.1875rem;
         height: 5.625rem; } }
 
+.team__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.team__content {
+  margin: 0 auto;
+  padding-top: 10%; }
+
 .team__title {
   margin-bottom: 3.5625rem;
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .team__title {
+      margin-bottom: 3rem; } }
 
 .team__list {
   display: -webkit-box;
@@ -1046,6 +1059,15 @@ table {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .team__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .team__item {
   width: calc(100% / 4);
@@ -1060,8 +1082,21 @@ table {
   -ms-flex-align: center;
   align-items: center;
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .team__item {
+      width: 100%;
+      margin-bottom: 0.625rem; } }
   .team__item:nth-child(even) {
     padding-top: 5%; }
+    @media screen and (max-width: 768px) {
+      .team__item:nth-child(even) {
+        padding-top: 0; } }
+  .team__item--active .team__avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 14rem;
+    height: 18rem; }
   .team__item--active .team__info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1087,6 +1122,9 @@ table {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 1.625rem; }
+  @media screen and (max-width: 768px) {
+    .team__avatar {
+      display: none; } }
 
 .team__photo {
   width: 100%;
@@ -1110,7 +1148,8 @@ table {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
   .team__name::after {
     content: ' ';
     width: 0;
@@ -1120,9 +1159,17 @@ table {
     border-top-color: #365a49;
     border-bottom: 0;
     margin-left: 0.3125rem; }
+  @media screen and (max-width: 768px) {
+    .team__name {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1; } }
 
 .team__info {
   display: none; }
+  @media screen and (max-width: 768px) {
+    .team__info {
+      width: 55%; } }
 
 .team__occ {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
