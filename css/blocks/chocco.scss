@@ -1,0 +1,23 @@
+.chocco {
+  background-color: $white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -31%;
+    right: 0%;
+    display: block;
+    background-image: url("../../img/bg/bg-image-chocco.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: rem(196px);
+    height: rem(453px);
+    @include tablets {
+      width: rem(157px);
+      height: rem(362px);
+      bottom: -21%;
+
+    }
+  }
+}
