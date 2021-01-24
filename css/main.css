@@ -787,6 +787,9 @@ table {
   @media screen and (max-width: 768px) {
     .title {
       font-size: 2.625rem; } }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 2.5rem; } }
 
 .btn {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
@@ -888,6 +891,9 @@ table {
 
 .why__title {
   margin-bottom: 1.5625rem; }
+  @media screen and (max-width: 480px) {
+    .why__title {
+      text-align: center; } }
 
 .why__subtitle {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
@@ -901,6 +907,9 @@ table {
     .why__subtitle {
       margin-bottom: 2.5rem;
       width: 62%; } }
+  @media screen and (max-width: 480px) {
+    .why__subtitle {
+      width: 88%; } }
 
 .why__list {
   display: -webkit-box;
@@ -909,6 +918,15 @@ table {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 480px) {
+    .why__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .why__item {
   width: calc(100%/3);
@@ -929,6 +947,10 @@ table {
         display: none; } }
   .why__item:last-child::after {
     display: none; }
+  @media screen and (max-width: 480px) {
+    .why__item {
+      width: 88%;
+      margin-bottom: 2.5rem; } }
 
 .why-desc {
   display: -webkit-box;
@@ -942,6 +964,15 @@ table {
   -ms-flex-align: center;
   align-items: center;
   text-align: center; }
+  @media screen and (max-width: 480px) {
+    .why-desc {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .why-desc__img {
   width: 7.8125rem;
@@ -950,6 +981,9 @@ table {
   border-radius: 50%;
   position: relative;
   margin-bottom: 2.1875rem; }
+  @media screen and (max-width: 480px) {
+    .why-desc__img {
+      margin-bottom: 0; } }
 
 .why-desc__icon {
   position: absolute;
@@ -960,6 +994,21 @@ table {
   transform: translate(-50%, -50%);
   width: 4.6875rem;
   height: 4.3125rem; }
+
+.why-desc__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media screen and (max-width: 480px) {
+    .why-desc__info {
+      text-align: left;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; } }
 
 .why-desc__title {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
