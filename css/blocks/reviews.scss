@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+  z-index: $z-content;
 }
 .reviews__title {
   margin-bottom: rem(44px);

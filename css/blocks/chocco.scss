@@ -19,5 +19,11 @@
       bottom: -21%;
 
     }
+    @include phones {
+      width: rem(137px);
+      height: rem(322px);
+      right: -15%;
+
+    }
   }
 }

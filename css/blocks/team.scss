@@ -18,6 +18,9 @@
       height: rem(85px);
       right: -1%;
     }
+    @include phones {
+      right: -3%;
+    }
   }
   &::after {
     content: "";
@@ -44,6 +47,8 @@
 .team__content {
   margin: 0 auto;
   padding-top: 10%;
+  z-index: $z-content;
+
 }
 .team__title {
   margin-bottom: rem(57px);
