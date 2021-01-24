@@ -79,8 +79,10 @@
   &--active {
     & .team__avatar {
       display: flex;
-      width: rem(224px);
-      height: rem(288px);
+      @include tablets {
+        width: rem(224px);
+        height: rem(288px);
+      }
     }
     & .team__info {
       display: flex;
