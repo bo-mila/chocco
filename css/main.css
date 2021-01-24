@@ -674,7 +674,7 @@ table {
       background-image: url("../../img/icons/barry-bef-why.png");
       background-repeat: no-repeat;
       background-size: contain;
-      z-index: 3;
+      z-index: 10;
       width: 6.9375rem;
       height: 6.75rem; }
       @media screen and (max-width: 768px) {
@@ -693,7 +693,7 @@ table {
       background-image: url("../../img/icons/leaf-first.png");
       background-repeat: no-repeat;
       background-size: contain;
-      z-index: 3;
+      z-index: 10;
       width: 14.75rem;
       height: 12.6875rem; }
       @media screen and (max-width: 768px) {
@@ -757,7 +757,7 @@ table {
     background-image: url("../../img/icons/barry-first.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 13.75rem;
     height: 13rem; }
     @media screen and (max-width: 768px) {
@@ -856,7 +856,7 @@ table {
     background-image: url("../../img/icons/barry-af-why.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 10.0625rem;
     height: 19.6875rem; }
     @media screen and (max-width: 768px) {
@@ -989,7 +989,7 @@ table {
     background-image: url("../../img/bg/bg-image-chocco.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 12.25rem;
     height: 28.3125rem; }
     @media screen and (max-width: 768px) {
@@ -1010,7 +1010,7 @@ table {
     background-image: url("../../img/icons/barry-bef-team.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 8.4375rem;
     height: 7rem; }
     @media screen and (max-width: 768px) {
@@ -1027,7 +1027,7 @@ table {
     background-image: url("../../img/icons/barry-af-team.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 6.5rem;
     height: 7.125rem; }
     @media screen and (max-width: 768px) {
@@ -1239,6 +1239,17 @@ table {
       width: 100%;
       padding-left: 1.875rem;
       padding-right: 2.0625rem; }
+    @media screen and (max-width: 768px) {
+      .menu__item--active {
+        width: 100%; } }
+    @media screen and (max-width: 480px) {
+      .menu__item--active {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        z-index: 8; }
+        .menu__item--active .menu__desc {
+          padding-top: 15%; } }
 
 .menu__name {
   width: 6.25rem;
@@ -1315,7 +1326,7 @@ table {
     background-image: url("../../img/icons/barry-bef-reviews.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 9.375rem;
     height: 5.375rem; }
     @media screen and (max-width: 768px) {
@@ -1333,7 +1344,7 @@ table {
     background-position: left 0% bottom -40%;
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 6.375rem;
     height: 20.0625rem; }
     @media screen and (max-width: 768px) {
@@ -1531,7 +1542,7 @@ table {
     background-image: url("../../img/icons/barry-af-reviews.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 8.4375rem;
     height: 12.0625rem; }
     @media screen and (max-width: 768px) {
@@ -1553,7 +1564,7 @@ table {
     background-image: url("../../img/icons/barry-bef-order.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 15rem;
     height: 16.25rem; }
     @media screen and (max-width: 768px) {
@@ -1571,7 +1582,7 @@ table {
     background-image: url("../../img/icons/leaf-af-order.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 8.4375rem;
     height: 11.75rem; }
     @media screen and (max-width: 768px) {
@@ -1608,7 +1619,7 @@ table {
     background-image: url("../../img/icons/barry-af-order-content.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 3;
+    z-index: 10;
     width: 2.9375rem;
     height: 3rem; }
     @media screen and (max-width: 768px) {
