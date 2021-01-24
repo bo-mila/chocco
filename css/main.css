@@ -707,7 +707,8 @@ table {
   margin-bottom: 2rem; }
   @media screen and (max-width: 768px) {
     .first__desc {
-      margin-bottom: 1.25rem; } }
+      margin-bottom: 1.25rem;
+      z-index: 12; } }
 
 .first__title {
   margin-bottom: 1.4375rem; }

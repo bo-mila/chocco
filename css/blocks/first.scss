@@ -70,7 +70,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
+ 
   &:first-child {
     @include tablets {
       width: 94%;
@@ -99,6 +99,7 @@
     @include tablets {
       width: 62%;
       margin-bottom: rem(12px);
+
     }
     
     &::after {
@@ -121,12 +122,13 @@
       }
     }
   }
-
 }
 .first__desc {
   margin-bottom: rem(32px);
   @include tablets {
     margin-bottom: rem(20px);
+    z-index: $z-first-column;
+
   }
 }
 .first__title {
