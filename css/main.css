@@ -1481,12 +1481,22 @@ table {
   height: 4.125rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 0.3125rem solid transparent;
-  margin-right: 0.3125rem; }
+  border: 5px solid transparent;
+  margin-right: 0.3125rem;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
   .reviews__item-btn:last-child {
     margin-right: 0; }
   .reviews__item-btn--active {
     border-color: #365a49; }
+  @media screen and (max-width: 768px) {
+    .reviews__item-btn {
+      width: 3.625rem;
+      height: 3.625rem; } }
+  @media screen and (max-width: 480px) {
+    .reviews__item-btn {
+      width: 3.3125rem;
+      height: 3.3125rem; } }
 
 .reviews__img-btn {
   width: 100%;
@@ -1510,7 +1520,7 @@ table {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
-    width: 7.9375rem;
+    width: 7.4375rem;
     height: 10.4375rem; }
   .review::after {
     content: "";
@@ -1526,7 +1536,8 @@ table {
     height: 5.625rem; }
 
 .review__avatar {
-  margin-right: 1.25rem; }
+  margin-right: 1.25rem;
+  z-index: 5; }
   @media screen and (max-width: 768px) {
     .review__avatar {
       margin-right: 0;
@@ -1540,6 +1551,10 @@ table {
     .review__photo {
       width: 8.125rem;
       height: 8.3125rem; } }
+  @media screen and (max-width: 480px) {
+    .review__photo {
+      width: 7.5625rem;
+      height: 7.75rem; } }
 
 .review__img {
   width: 100%;

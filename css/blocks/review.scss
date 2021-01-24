@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bg-image-review;
-    width: rem(127px);
+    width: rem(119px);
     height: rem(167px);
   }
 
@@ -31,6 +31,7 @@
 }
 .review__avatar {
   margin-right: rem(20px);
+  z-index: $z-review-avatar;
   @include tablets {
     margin-right: 0;
     margin-bottom: rem(31px);
@@ -43,6 +44,10 @@
   @include tablets {
     width: rem(130px);
     height: rem(133px);
+  }
+  @include phones {
+    width: rem(121px);
+    height: rem(124px);
   }
 }
 .review__img {

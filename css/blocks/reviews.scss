@@ -86,15 +86,23 @@
   height: rem(66px);
   border-radius: 50%;
   overflow: hidden;
-  border: rem(5px) solid transparent;
+  border: 5px solid transparent;
   margin-right: rem(5px);
-
+  box-sizing: content-box;
   &:last-child {
     margin-right: 0;
   }
 
   &--active {
     border-color: $green;
+  }
+  @include tablets {
+    width: rem(58px);
+    height: rem(58px);
+  }
+  @include phones {
+    width: rem(53px);
+    height: rem(53px);
   }
 }
 .reviews__img-btn {
