@@ -1,0 +1,16 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: rem(26px) 0 rem(21px);
+  background-color: $white;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+  @include alegreya-sans(normal);
+  font-size: rem(21px);
+}
+.footer__address {
+  margin-bottom: rem(12px);
+}

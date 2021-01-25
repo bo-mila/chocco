@@ -453,6 +453,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+address {
+  font-style: normal; }
+
 .header {
   position: absolute;
   z-index: 1;
@@ -1912,3 +1915,38 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+
+.contacts {
+  background-image: url("../../img/bg/bg-contacts.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  position: relative; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.625rem 0 1.3125rem;
+  background-color: #fff; }
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Alegreya-sans', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem; }
+
+.footer__address {
+  margin-bottom: 0.75rem; }
+
+.address {
+  color: #000; }
+
+.phone {
+  color: #365a49; }
