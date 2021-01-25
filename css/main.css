@@ -1707,6 +1707,9 @@ table {
   @media screen and (max-width: 768px) {
     .order__title {
       margin-bottom: 1.5625rem; } }
+  @media screen and (max-width: 480px) {
+    .order__title {
+      text-align: center; } }
 
 .form {
   width: 100%;
@@ -1768,6 +1771,11 @@ table {
   margin-bottom: 1.25rem; }
   .form__row:last-child {
     margin-bottom: 0; }
+  @media screen and (max-width: 480px) {
+    .form__row--centered {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .form__block {
   -webkit-box-flex: 1;
@@ -1814,6 +1822,7 @@ table {
     border-color: #dee2bd; }
 
 .form__option {
+  position: relative;
   margin-right: 0.9375rem;
   cursor: pointer; }
   .form__option:last-child {
@@ -1839,22 +1848,31 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  padding-left: 2.1875rem; }
   .option__title::before {
     content: "";
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    margin-right: 0.3125rem;
     width: 1.625rem;
     height: 1.625rem;
     background-color: #fff;
-    border-radius: 50%; }
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
   .option__title:after {
     content: "";
     position: absolute;
     display: none;
     left: 4%;
-    top: 24%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 0.875rem;
     height: 0.875rem;
     background-color: #365a49;

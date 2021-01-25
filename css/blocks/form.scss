@@ -37,6 +37,11 @@
   &:last-child {
     margin-bottom: 0;
   }
+  &--centered {
+    @include phones {
+      justify-content: center;
+    }
+  }
 
 }
 .form__block {
@@ -85,12 +90,14 @@
   }
  }
  .form__option {
+   position: relative;
    margin-right: rem(15px);
    cursor: pointer;
 
    &:last-child {
      margin-right: 0;
    }
+   
  }
 .option__radio {
   display: none;
@@ -114,15 +121,20 @@
   font-size: rem(18px);
   align-items: center;
   position: relative;
+  padding-left: rem(35px);
 
   &::before {
     content: "";
     flex-shrink: 0;
-    margin-right: rem(5px);
+    // margin-right: rem(5px);
     width: rem(26px);
     height: rem(26px);
     background-color: $white;
     border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &:after{
@@ -130,7 +142,8 @@
     position: absolute;
     display: none;
     left: 4%;
-    top: 24%;
+    top: 50%;
+    transform: translateY(-50%);
     width: rem(14px);
     height: rem(14px);
     background-color: $green;

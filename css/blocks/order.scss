@@ -76,4 +76,7 @@
   @include tablets {
     margin-bottom: rem(25px);
   }
+  @include phones {
+    text-align: center;
+  }
 }
