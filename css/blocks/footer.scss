@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: rem(21px) 0;
+  padding: rem(22px) 0;
   background-color: $white;
 }
 .footer__content {
@@ -12,14 +12,26 @@
   font-size: rem(21px);
   line-height: 1;
   width: 100%;
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.footer__right, .footer__left {
-  width: 50%;
+.footer__left {
+  flex: 1;
+  @include phones {
+    margin-bottom: rem(20px);
+  }
 }
 .footer__address {
-  margin-bottom: rem(12px);
+  margin-bottom: rem(10px);
 }
 .footer__right {
   display: flex;
   justify-content: flex-end;
+  width: 40%;
+  @include phones {
+    width: 100%;
+    justify-content: center;
+  }
 }

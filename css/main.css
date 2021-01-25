@@ -522,6 +522,11 @@ address {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .phones {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .phones__icon {
   width: 0.75rem;
@@ -1939,7 +1944,7 @@ address {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 1.3125rem 0;
+  padding: 1.375rem 0;
   background-color: #fff; }
 
 .footer__content {
@@ -1954,12 +1959,26 @@ address {
   font-size: 1.3125rem;
   line-height: 1;
   width: 100%; }
+  @media screen and (max-width: 480px) {
+    .footer__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
-.footer__right, .footer__left {
-  width: 50%; }
+.footer__left {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+  @media screen and (max-width: 480px) {
+    .footer__left {
+      margin-bottom: 1.25rem; } }
 
 .footer__address {
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.625rem; }
 
 .footer__right {
   display: -webkit-box;
@@ -1967,10 +1986,20 @@ address {
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  width: 40%; }
+  @media screen and (max-width: 480px) {
+    .footer__right {
+      width: 100%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .address {
   color: #000; }
+  @media screen and (max-width: 480px) {
+    .address {
+      text-align: center; } }
 
 .phone {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
