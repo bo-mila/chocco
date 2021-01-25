@@ -36,8 +36,13 @@
             </li>
           </ul>
         </nav>
-        <address class="header__phones phones">
-          <a href="tel:+78000039210" class="phones__number">8 800 903 90 90</a>
+        <address class="header__phone phone">
+          <a href="tel:+78000039210" class="phone__number">
+            <svg class="phone__icon">
+              <use xlink:href="img/icons/sprite.svg#phone"></use>
+            </svg>
+            <span>8 800 903 90 90</span>
+          </a>
         </address>
         <div class="header__hamburger-menu hamburger-menu">
           <a href="" class="hamburger-menu__link">
@@ -65,7 +70,9 @@
               <ul class="features__list">
                 <li class="features__item feature">
                   <div class="feature__img">
-                    <img src="./img/icons/leaf.png" alt="Картинка листочков" class="feature__icon">
+                    <svg class="feature__icon" alt="Картинка листочков">
+                      <use xlink:href="img/icons/sprite.svg#leaf"></use>
+                    </svg>
                   </div>
                   <div class="feature__desc">
                     <p>100% натуральный продукт</p>
@@ -73,7 +80,9 @@
                 </li>
                 <li class="features__item feature">
                   <div class="feature__img">
-                    <img src="./img/icons/car.png" alt="Картинка листочков" class="feature__icon">
+                    <svg class="feature__icon" alt="Картинка машины">
+                      <use xlink:href="img/icons/sprite.svg#car"></use>
+                    </svg>
                   </div>
                   <div class="feature__desc">
                     <p>3-5 дней доставка по РФ</p>
@@ -81,7 +90,9 @@
                 </li>
                 <li class="features__item feature">
                   <div class="feature__img">
-                    <img src="./img/icons/rule.png" alt="Картинка листочков" class="feature__icon">
+                    <svg class="feature__icon" alt="Картинка рулетки">
+                      <use xlink:href="img/icons/sprite.svg#rule"></use>
+                    </svg>
                   </div>
                   <div class="feature__desc">
                     <p>Не портит фигуру</p>
@@ -113,7 +124,9 @@
           <ul class="why__list">
             <li class="why__item why-desc">
               <div class="why-desc__img">
-                <img src="./img/icons/1.svg" alt="Картинка довольного человека" class="why-desc__icon">
+                <svg class="why-desc__icon" alt="Картинка довольного человека">
+                  <use xlink:href="img/icons/sprite.svg#human"></use>
+                </svg>
               </div>
               <div class="why-desc__info">
                 <div class="why-desc__title">
@@ -130,7 +143,9 @@
             </li>
             <li class="why__item why-desc">
               <div class="why-desc__img">
-                <img src="./img/icons/2.svg" alt="Картинка смайлика" class="why-desc__icon">
+                <svg class="why-desc__icon" alt="Картинка смайлика">
+                  <use xlink:href="img/icons/sprite.svg#smile"></use>
+                </svg>
               </div>
               <div class="why-desc__info">
                 <div class="why-desc__title">
@@ -147,7 +162,9 @@
             </li>
             <li class="why__item why-desc">
               <div class="why-desc__img">
-                <img src="./img/icons/3.svg" alt="Картинка бицепса" class="why-desc__icon">
+                <svg class="why-desc__icon" alt="Картинка бицепса">
+                  <use xlink:href="img/icons/sprite.svg#hand"></use>
+                </svg>
               </div>
               <div class="why-desc__info">
                 <div class="why-desc__title">
@@ -436,7 +453,12 @@
               <div class="form__row form__row--centered">
                 <label class="form__option check">
                   <input type="checkbox" name="checking" class="check__checkbox">
-                  <div class="check__title">Не перезванивать</div>
+                  <div class="check__title">
+                    <svg class="check__icon" alt="Картинка отметки">
+                      <use xlink:href="img/icons/sprite.svg#checkmark"></use>
+                    </svg>
+                    <span>Не перезванивать</span>
+                  </div>
                 </label>
               </div>
               <div class="form__row form__row--centered">
@@ -456,14 +478,42 @@
               <address class="footer__address address">
                 <p>Москва, ул.Новый Арбат, д.31/12</p>
               </address>
-              <a href="tel:+88009039090" class="footer__phone phone">
+              <a href="tel:+88009039090" class="footer__phones phones">
+                <svg class="phones__icon" alt="Картинка телефона">
+                  <use xlink:href="img/icons/sprite.svg#phone"></use>
+                </svg>
                 <span>8 800 903 90 90</span>
               </a>
             </div>
             <div class="footer__right">
               <ul class="footer__network network">
                 <li class="network__item">
-                  
+                  <a href="https://vk.com" class="network__ref vk" target="_blank">
+                    <svg class="vk__icon">
+                      <use xlink:href="img/icons/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="network__item">
+                  <a href="https://facebook.com" class="network__ref fb" target="_blank">
+                    <svg class="fb__icon">
+                      <use xlink:href="img/icons/sprite.svg#fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="network__item">
+                  <a href="https://google.com" class="network__ref inst" target="_blank">
+                    <svg class="inst__icon">
+                      <use xlink:href="img/icons/sprite.svg#inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="network__item">
+                  <a href="https://twitter.com" class="network__ref tw" target="_blank">
+                    <svg class="tw__icon">
+                      <use xlink:href="img/icons/sprite.svg#tw"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>

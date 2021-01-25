@@ -150,34 +150,3 @@
     border-radius: 50%;
   }
 }
-.check__checkbox {
-  display: none;
-
-  &:checked {
-    & ~ .check__title {
-      color: $green;
-      &::before {
-        border-color: $yellow;
-      }
-    }
-  }
-}
-.check__title {
-  @include alegreya-sans(normal);
-  font-size: rem(18px);
-  display: flex;
-  flex-direction: row;
-  color: $green;
-  align-items: center;
-  
-  &::before {
-    content: "";
-    flex-shrink: 0;
-    margin-right: rem(10px);
-    width: rem(26px);
-    height: rem(26px);
-    background-color: $white;
-    border-radius: rem(1px);
-    display: flex;
-  }
-}

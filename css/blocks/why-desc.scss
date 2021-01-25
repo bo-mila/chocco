@@ -24,8 +24,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: rem(75px);
+  width: rem(74px);
   height: rem(69px);
+  fill: $light-black-icon;
 }
 .why-desc__info {
   display: flex;

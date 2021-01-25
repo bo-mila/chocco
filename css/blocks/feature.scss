@@ -3,10 +3,13 @@
   display: flex;
 }
 .feature__img {
+  color: $light-blue;
+  margin-right: rem(5px);
+}
+.feature__icon {
   width: rem(50px);
   height: rem(42px);
-  color: $light-blue;
-  margin-right: rem(7px);
+  fill: $light-blue;
 }
 .feature__desc {
   @include alegreya-sans(normal);

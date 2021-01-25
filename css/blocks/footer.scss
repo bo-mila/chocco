@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: rem(26px) 0 rem(21px);
+  padding: rem(21px) 0;
   background-color: $white;
 }
 .footer__content {
@@ -10,7 +10,16 @@
   align-items: center;
   @include alegreya-sans(normal);
   font-size: rem(21px);
+  line-height: 1;
+  width: 100%;
+}
+.footer__right, .footer__left {
+  width: 50%;
 }
 .footer__address {
   margin-bottom: rem(12px);
+}
+.footer__right {
+  display: flex;
+  justify-content: flex-end;
 }
