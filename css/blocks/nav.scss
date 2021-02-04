@@ -1,6 +1,6 @@
 .nav {
   @include alegreya-sans(normal);
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 1;
 }
 .nav__list {
@@ -11,4 +11,9 @@
 }
 .nav__item {
   cursor: pointer;
+  text-align: center;
+  margin-right: rem(5px);
+  &:last-child {
+    margin-right: 0;
+  }
 }

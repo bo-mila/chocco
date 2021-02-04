@@ -1,38 +1,14 @@
 .first {
   background-color: $blue;
-  padding: 47px 0;
+  padding: rem(47px) 0;
   background-image: url("../../img/bg/bg-image.png");
   background-position: right 0% bottom 68%;
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 10%;
-    right: 25%;
-    display: block;
-    background-image: url("../../img/icons/barry-first.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: $z-bef-af-section;
-    width: 220px;
-    height: 208px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 19%;
-    right: 4%;
-    display: block;
-    background-image: url("../../img/icons/leaf-first.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: $z-bef-af-section;
-    width: 236px;
-    height: 203px;
+  @include tablets {
+    background-size: 61%;
+    background-position: right 0% top 17%;
   }
 }
 .first__container {
@@ -46,29 +22,47 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -6%;
-    left: 2%;
+    bottom: -15%;
+    left: -5%;
     display: block;
     background-image: url("../../img/icons/leaf-bef-first-content.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-first-content;
-    width: 59px;
-    height: 112px;
+    width: rem(59px);
+    height: rem(112px);
+    @include tablets {
+      bottom: 55%;
+      left: 17%;
+      width: rem(49px);
+      height: rem(102px);
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    right: 28%;
+    bottom: -12%;
+    right: 22%;
     display: block;
     background-image: url("../../img/icons/leaf-af-first-content.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: $z-bef-af-first-content;
-    width: 141px;
-    height: 102px;
+    width: rem(141px);
+    height: rem(102px);
+    @include tablets {
+      bottom: 47%;
+      right: 37%;
+      width: rem(121px);
+      height: rem(82px);
+    }
+  }
+
+  @include tablets {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
   }
 }
 .first__column {
@@ -76,27 +70,92 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
+ 
+  &:first-child {
+    @include tablets {
+      width: 94%;
+      text-align: center;
+    }
+  }
   &:last-child {
     // margin-right: 0;
     justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -13%;
+      right: 3%;
+      display: block;
+      background-image: url("../../img/icons/barry-bef-why.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: $z-bef-af-section;
+      width: rem(111px);
+      height: rem(108px);
+      @include tablets {
+        display: none;
+      }
+    }
+    @include tablets {
+      width: 62%;
+      margin-bottom: rem(12px);
+
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 15%;
+      right: -2%;
+      display: block;
+      background-image: url("../../img/icons/leaf-first.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: $z-bef-af-section;
+      width: rem(236px);
+      height: rem(203px);
+      @include tablets {
+        bottom: 57%;
+        right: 15%;
+        width: rem(180px);
+        height: rem(163px);
+      }
+    }
   }
 }
 .first__desc {
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
+  @include tablets {
+    margin-bottom: rem(20px);
+    z-index: $z-first-column;
+
+  }
 }
 .first__title {
-  margin-bottom: 23px;
+  margin-bottom: rem(23px);
+  @include tablets {
+    text-align: center;
+    margin-bottom: rem(13px);
+
+  }
 }
 .first__text {
   @include alegreya-sans(normal);
-  font-size: 21px;
+  font-size: rem(21px);
   color: $white;
   width: 80%;
+  @include tablets {
+    margin: 0 auto;
+    width: 57%;
+  }
 }
 .first__btn {
   display: flex;
-  margin-bottom: 72px;
+  margin-bottom: rem(72px);
+  @include tablets {
+    margin-bottom: 0;
+    margin: 0 auto;
+  }
 }
 .first__img {
   width: 100%;
@@ -108,5 +167,30 @@
     width: 100%;
     height: 100%;
     object-position: center center;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 9%;
+    right: 15%;
+    display: block;
+    background-image: url("../../img/icons/barry-first.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: rem(220px);
+    height: rem(208px);
+    @include tablets {
+      bottom: 47%;
+      right: 27%;
+      background-image: url("../../img/icons/barry3.png");
+      width: rem(309px);
+      height: rem(221px);
+    }
+  }
+}
+.first__features {
+  @include tablets {
+    display: none;
   }
 }

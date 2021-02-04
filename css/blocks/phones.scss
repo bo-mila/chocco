@@ -1,0 +1,14 @@
+.phones {
+  color: $green;
+  display: flex;
+  align-items: center;
+  @include phones {
+    justify-content: center;
+  }
+}
+.phones__icon {
+  width: rem(12px);
+  height: rem(11px);
+  fill: currentColor;
+  margin-right: rem(5px);
+}

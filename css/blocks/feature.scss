@@ -1,15 +1,19 @@
+
 .feature {
   display: flex;
 }
 .feature__img {
-  width: 50px;
-  height: 42px;
   color: $light-blue;
-  margin-right: 7px;
+  margin-right: rem(5px);
+}
+.feature__icon {
+  width: rem(50px);
+  height: rem(42px);
+  fill: $light-blue;
 }
 .feature__desc {
   @include alegreya-sans(normal);
-  font-size: 16px;
+  font-size: rem(16px);
   color: $white;
 
   & p {

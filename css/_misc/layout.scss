@@ -3,6 +3,13 @@ body {
 }
 html {
   box-sizing: border-box;
+  font-size: 16px;
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -42,7 +49,10 @@ html, body {
 }
 .container {
   margin: 0 auto;
+  position: relative;
+  max-width: 940px;
   width: 95%;
+  display: flex;
 }
 .section {
   height: 100vh;
@@ -51,7 +61,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  // overflow: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -72,4 +82,7 @@ button {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+address {
+  font-style: normal;
 }
