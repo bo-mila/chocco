@@ -1080,9 +1080,11 @@ address {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 15; }
+  z-index: 15;
+  position: relative; }
 
 .chocco__arrow {
+  position: relative;
   cursor: pointer;
   fill: #151515;
   z-index: 16; }
@@ -1100,6 +1102,12 @@ address {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg); }
+  @media screen and (max-width: 768px) {
+    .chocco__arrow {
+      top: -15%; } }
+  @media screen and (max-width: 480px) {
+    .chocco__arrow {
+      top: -25%; } }
 
 .chocco__slider {
   -webkit-box-flex: 1;
@@ -1164,6 +1172,8 @@ address {
     width: 4.6875rem;
     height: 5.75rem;
     background-image: url("../../img/icons/leaf-slider-bef.png");
+    background-size: cover;
+    background-position: center center;
     position: absolute;
     top: 17%;
     left: -13%; }
@@ -1174,25 +1184,37 @@ address {
     height: 11.75rem;
     bottom: -24%;
     right: 2%;
-    -webkit-transform: rotate(26deg) scale(0.7);
-    -ms-transform: rotate(26deg) scale(0.7);
-    transform: rotate(26deg) scale(0.7);
+    -webkit-transform: rotate(26deg) scale(0.9);
+    -ms-transform: rotate(26deg) scale(0.9);
+    transform: rotate(26deg) scale(0.9);
     background-image: url("../../img/icons/leaf-af-order.png");
-    -o-object-fit: contain;
-    object-fit: contain;
     background-position: center center;
+    background-size: cover;
     position: absolute; }
     @media screen and (max-width: 768px) {
       .slide__img::after {
         bottom: -20%;
-        right: -15%; } }
+        right: -15%;
+        -webkit-transform: rotate(26deg) scale(0.8);
+        -ms-transform: rotate(26deg) scale(0.8);
+        transform: rotate(26deg) scale(0.8); } }
+    @media screen and (max-width: 480px) {
+      .slide__img::after {
+        -webkit-transform: rotate(26deg) scale(0.7);
+        -ms-transform: rotate(26deg) scale(0.7);
+        transform: rotate(26deg) scale(0.7); } }
   @media screen and (max-width: 768px) {
     .slide__img {
       width: 60%;
       margin-right: 0;
       margin-bottom: 2%; } }
+  @media screen and (max-width: 480px) {
+    .slide__img {
+      width: 80%;
+      margin-bottom: 8%; } }
 
 .slide__pic {
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1240,6 +1262,9 @@ address {
       font-size: 1.875rem;
       text-align: center;
       margin-bottom: 1.125rem; } }
+  @media screen and (max-width: 480px) {
+    .slide__title {
+      margin-bottom: 1.25rem; } }
 
 .slide__info {
   display: -webkit-box;
@@ -1253,6 +1278,9 @@ address {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 2%; }
+  @media screen and (max-width: 480px) {
+    .slide__info {
+      margin-bottom: 12%; } }
 
 .slide__text {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
@@ -1266,6 +1294,9 @@ address {
       margin-bottom: 3%;
       text-align: center;
       width: 80%; } }
+  @media screen and (max-width: 480px) {
+    .slide__text {
+      margin-bottom: 5%; } }
 
 .slide__table {
   display: -webkit-box;
@@ -1325,6 +1356,9 @@ address {
     .slide__price {
       margin-right: 5%;
       font-size: 3.125rem; } }
+  @media screen and (max-width: 480px) {
+    .slide__price {
+      margin-right: 3%; } }
 
 .contain {
   display: -webkit-box;

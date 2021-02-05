@@ -36,10 +36,10 @@
   justify-content: space-between;
   align-items: center;
   z-index: $z-chocco-content;
-  // height: 100%;
-  // width: 100%;
+  position: relative;
 }
 .chocco__arrow {
+  position: relative;
   cursor: pointer;
   fill: $light-black;
   z-index: $z-chocco-arrow;
@@ -50,6 +50,12 @@
   &--right {
     transform-origin: center center;
     transform: rotate(-90deg);
+  }
+  @include tablets {
+    top: -15%;
+  }
+  @include phones {
+    top: -25%;
   }
 }
 .chocco__slider {
