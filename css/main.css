@@ -1084,7 +1084,8 @@ address {
 
 .chocco__arrow {
   cursor: pointer;
-  fill: #151515; }
+  fill: #151515;
+  z-index: 16; }
   .chocco__arrow--left {
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -1131,8 +1132,16 @@ address {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  position: relative;
-  height: 100%; }
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .slide {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .slide__img {
   display: -webkit-box;
@@ -1173,6 +1182,15 @@ address {
     object-fit: contain;
     background-position: center center;
     position: absolute; }
+    @media screen and (max-width: 768px) {
+      .slide__img::after {
+        bottom: -20%;
+        right: -15%; } }
+  @media screen and (max-width: 768px) {
+    .slide__img {
+      width: 60%;
+      margin-right: 0;
+      margin-bottom: 2%; } }
 
 .slide__pic {
   width: 100%;
@@ -1199,6 +1217,15 @@ address {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  @media screen and (max-width: 768px) {
+    .slide__desc {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      padding-top: 5%; } }
 
 .slide__contain {
   position: absolute;
@@ -1208,22 +1235,46 @@ address {
 .slide__title {
   font-size: 2.25rem;
   margin-bottom: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .slide__title {
+      font-size: 1.875rem;
+      text-align: center;
+      margin-bottom: 1.125rem; } }
 
 .slide__info {
-  width: 95%;
-  margin-bottom: 2.375rem; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2%; }
 
 .slide__text {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   margin-bottom: 2.6875rem;
-  color: #666666; }
+  color: #666666;
+  width: 95%; }
+  @media screen and (max-width: 768px) {
+    .slide__text {
+      margin-bottom: 3%;
+      text-align: center;
+      width: 80%; } }
 
 .slide__table {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%; }
 
 .slide__col {
   display: -webkit-box;
@@ -1235,6 +1286,9 @@ address {
   flex-direction: column;
   font-size: 1.125rem;
   margin-right: 15%; }
+  @media screen and (max-width: 768px) {
+    .slide__col {
+      margin-right: 8%; } }
   .slide__col:last-child {
     margin-right: 0; }
 
@@ -1242,6 +1296,9 @@ address {
   margin-bottom: 0.5rem;
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
   font-weight: 400; }
+  @media screen and (max-width: 768px) {
+    .slide__col-title {
+      margin-bottom: 0.25rem; } }
 
 .slide__col-number {
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
@@ -1251,15 +1308,23 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .slide__price {
   margin-right: 8%;
   font-family: 'Alegreya-sans', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 3.75rem; }
+  @media screen and (max-width: 768px) {
+    .slide__price {
+      margin-right: 5%;
+      font-size: 3.125rem; } }
 
 .contain {
   display: -webkit-box;
@@ -1272,6 +1337,9 @@ address {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
+  @media screen and (max-width: 768px) {
+    .contain {
+      display: none; } }
 
 .contain__img {
   fill: #fff;

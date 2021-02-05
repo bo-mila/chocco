@@ -8,6 +8,9 @@
       transform: scale(1);
     }
   }
+  @include tablets {
+    display: none;
+  }
 }
 .contain__img {
   fill: $white;

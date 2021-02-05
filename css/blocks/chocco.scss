@@ -42,6 +42,7 @@
 .chocco__arrow {
   cursor: pointer;
   fill: $light-black;
+  z-index: $z-chocco-arrow;
   &--left {
     transform-origin: center center;
     transform: rotate(90deg);
