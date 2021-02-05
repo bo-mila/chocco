@@ -27,3 +27,31 @@
     }
   }
 }
+.chocco__container {
+  height: 100%;
+  display: flex;
+}
+.chocco__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: $z-chocco-content;
+  // height: 100%;
+  // width: 100%;
+}
+.chocco__arrow {
+  cursor: pointer;
+  fill: $light-black;
+  &--left {
+    transform-origin: center center;
+    transform: rotate(90deg);
+  }
+  &--right {
+    transform-origin: center center;
+    transform: rotate(-90deg);
+  }
+}
+.chocco__slider {
+  flex: 1;
+  height: 100%;
+}
