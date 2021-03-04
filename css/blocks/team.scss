@@ -48,7 +48,9 @@
   margin: 0 auto;
   padding-top: 10%;
   z-index: $z-content;
-
+  @include phones {
+    padding-top: 20%;
+  }
 }
 .team__title {
   margin-bottom: rem(57px);
@@ -61,37 +63,43 @@
   display: flex;
   justify-content: space-between;
   @include tablets {
+    margin: 0 auto;
+    width: 75%;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
   }
 }
 .team__item {
   width: calc(100% / 4);
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   @include tablets {
     width: 100%;
-    margin-bottom: rem(10px);
+    margin-bottom: rem(15px);
   }
   &:nth-child(even) {
-    padding-top: 5%;
+    padding-top: rem(40px);
     @include tablets {
       padding-top: 0;
     }
   }
   &--active {
     & .team__avatar {
-      display: flex;
       @include tablets {
-        width: rem(224px);
         height: rem(288px);
+        opacity: 1;
+        margin-bottom: rem(16px);
+        transition: .6s;
       }
     }
     & .team__info {
-      display: flex;
-      flex-direction: column;
+      height: 100%;
+      opacity: 1;
+      transition: .6s;
     }
     & .team__name {
       &::after {
@@ -111,12 +119,19 @@
   justify-content: center;
   margin-bottom: rem(26px);
   @include tablets {
-    display: none;
+    width: rem(224px);
+    min-height: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .01s;
+    opacity: 0;
+    margin-bottom: 0;
   }
+ 
 }
 .team__photo {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   object-fit: cover;
   object-position: center center;
 }
@@ -144,9 +159,15 @@
   }
 }
 .team__info {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: .6s;
+  opacity: 0;
   @include tablets {
-    width: 55%;
+    width: 100%;
+    transition: .01s;
   }
 }
 .team__occ {

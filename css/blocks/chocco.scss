@@ -27,3 +27,38 @@
     }
   }
 }
+.chocco__container {
+  height: 100%;
+  display: flex;
+}
+.chocco__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: $z-chocco-content;
+  position: relative;
+}
+.chocco__arrow {
+  position: relative;
+  cursor: pointer;
+  fill: $light-black;
+  z-index: $z-chocco-arrow;
+  &--left {
+    transform-origin: center center;
+    transform: rotate(90deg);
+  }
+  &--right {
+    transform-origin: center center;
+    transform: rotate(-90deg);
+  }
+  @include tablets {
+    top: -15%;
+  }
+  @include phones {
+    top: -25%;
+  }
+}
+.chocco__slider {
+  flex: 1;
+  height: 100%;
+}
