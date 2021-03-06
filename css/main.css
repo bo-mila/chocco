@@ -1266,6 +1266,7 @@ address {
 
 .chocco__container {
   height: 100%;
+  width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1281,7 +1282,8 @@ address {
   -ms-flex-align: center;
   align-items: center;
   z-index: 15;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .chocco__arrow {
   position: relative;
@@ -1312,8 +1314,7 @@ address {
 .chocco__slider {
   -webkit-box-flex: 1;
   -ms-flex: 1;
-  flex: 1;
-  height: 100%; }
+  flex: 1; }
 
 .arrow-icon {
   width: 1.8125rem;
@@ -1325,22 +1326,32 @@ address {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  position: relative; }
 
 .slider__item {
-  display: none;
-  width: 100%; }
-  .slider__item--visible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+  position: absolute;
+  -webkit-transition: all ease .6s;
+  -o-transition: all ease .6s;
+  transition: all ease .6s;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  position: relative; }
+  height: auto;
+  padding-left: 5%; }
   @media screen and (max-width: 768px) {
     .slide {
       -webkit-box-orient: vertical;
@@ -1384,9 +1395,9 @@ address {
     height: 11.75rem;
     bottom: -24%;
     right: 2%;
-    -webkit-transform: rotate(26deg) scale(0.9);
-    -ms-transform: rotate(26deg) scale(0.9);
-    transform: rotate(26deg) scale(0.9);
+    -webkit-transform: rotate(26deg) scale(0.7);
+    -ms-transform: rotate(26deg) scale(0.7);
+    transform: rotate(26deg) scale(0.7);
     background-image: url("../../img/icons/leaf-af-order.png");
     background-position: center center;
     background-size: cover;

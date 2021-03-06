@@ -81,3 +81,134 @@ for (let i=0; i<menuItemLength; i++) {
     }
   });
 }
+
+
+
+///////////////   SLIDER    //////////////////////////
+const chocco = document.querySelector('.chocco');
+const slider = document.querySelector('.slider');
+let sliderItem = document.querySelectorAll('.slider__item');
+const sliderLength = sliderItem.length;
+const sliderArrowLeft = document.querySelector('.chocco__arrow--left');
+const sliderArrowRight = document.querySelector('.chocco__arrow--right');
+
+let sliderCopy = [];
+for (let i = 0; i < sliderLength; i++) {
+  sliderCopy[i] = sliderItem[i];
+  sliderItem[i].remove();
+}
+let slideView = 1; //кол-во видимых слайдов
+let slideNumberView = 0; //номер последнего видимого слайда
+
+createSlider();
+
+sliderArrowLeft.addEventListener('click', function(event) {
+  event.preventDefault();
+  left();
+});
+sliderArrowRight.addEventListener('click', function(event) {
+  event.preventDefault();
+  right();
+});
+chocco.addEventListener('click', function(event) {
+  event.preventDefault();
+});
+
+function createSlider() {
+  createSlideView();
+  createSlideLeft();
+  createSlideRight();
+}
+
+function createSlideView() {
+  for (let i = slideNumberView; i < slideView; i++) {
+    let li = document.createElement('li');
+    li = sliderCopy[i];
+    li.classList.add('slider__item');
+    li.style.left = i * (100/slideView) + '%';
+    slider.appendChild(li);
+    
+  }
+  slideNumberView = slideView - 1;
+}
+
+function createSlideLeft() {
+  let slideNumberLeft;
+  if ((slideNumberView - slideView) < 0) {
+    slideNumberLeft = sliderLength + (slideNumberView - slideView);
+  } else {
+    slideNumberLeft = slideNumberView - slideView;
+  }
+  let li = document.createElement('li');
+  li = sliderCopy[slideNumberLeft];
+  li.classList.add('slider__item');
+  li.classList.add('left');
+  li.style.left = -(100/slideView) + '%';
+  slider.insertBefore(li, slider.firstElementChild);
+}
+
+function createSlideRight() {
+  let slideNumberRight;
+  if (slideNumberView === sliderLength - 1) {
+    slideNumberRight = 0;
+  } else {
+    slideNumberRight = slideNumberView + 1;
+  }
+  let li = document.createElement('li');
+  li = sliderCopy[slideNumberRight];
+  li.classList.add('slider__item');
+  li.classList.add('right');
+  li.style.left = 100 + '%';
+  slider.appendChild(li);
+}
+
+function left() {
+  sliderArrowLeft.onclick = null;
+  let sliderL = document.querySelectorAll('.slider__item');
+  let offsetL = -1;
+  // console.log(offsetL)
+  for (let i = 0; i<slideView+2; i++) {
+    sliderL[i].style.left = (offsetL*100 - 100)/slideView + "%";
+    // console.log(offsetL*100 - 100);
+    offsetL++;
+  }
+  slideNumberView++;
+  if (slideNumberView == sliderLength) {
+    slideNumberView = 0;
+  }
+  setTimeout(function () {
+    sliderL[0].remove();
+    createSlideRight();
+    sliderArrowLeft.onclick = left;
+  }, 600);
+}
+function right() {
+  sliderArrowRight.onclick = null;
+  let sliderR = document.querySelectorAll('.slider__item');
+  let offsetR = (slideView+1);
+  
+  for (let i = (slideView+1); i>-1; i--) {
+    sliderR[i].style.left = offsetR*100/slideView + '%';
+    offsetR--;
+  }
+  slideNumberView--;
+  if (slideNumberView < 0) {
+    slideNumberView = (sliderLength - 1);
+  }
+  setTimeout(function() {
+    sliderR[(slideView+1)].remove();
+      createSlideLeft();
+      sliderArrowRight.onclick = right;
+  }, 600);
+}
+
+
+
+
+
+
+
+
+
+
+/////////////////  SCROLL  /////////////////////////////

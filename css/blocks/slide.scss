@@ -1,8 +1,9 @@
 .slide {
+  display: flex;
   align-items: center;
   width: 100%;
-  position: relative;
-  // height: 100%;
+  height: auto;
+  padding-left: 5%;
   @include tablets {
     flex-direction: column;
     justify-content: center;
@@ -36,7 +37,7 @@
     height: rem(188px);
     bottom: -24%;
     right: 2%;
-    transform: rotate(26deg) scale(.9);
+    transform: rotate(26deg) scale(.7);
     background-image: url("../../img/icons/leaf-af-order.png");
     background-position: center center;
     background-size: cover;
