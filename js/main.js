@@ -166,10 +166,8 @@ function left() {
   sliderArrowLeft.onclick = null;
   let sliderL = document.querySelectorAll('.slider__item');
   let offsetL = -1;
-  // console.log(offsetL)
   for (let i = 0; i<slideView+2; i++) {
     sliderL[i].style.left = (offsetL*100 - 100)/slideView + "%";
-    // console.log(offsetL*100 - 100);
     offsetL++;
   }
   slideNumberView++;
@@ -243,3 +241,29 @@ function scrollToSection(offset) {
   }, 1000);
   return;
 }
+
+
+
+////////////////////// SLIDE-SHOW //////////////////////
+$('.reviews__item-btn').on('click', function(e) {
+  if ($(this).hasClass('reviews__item-btn--active')) {
+    return;
+  }
+  let temp = $('.reviews__item-btn').index(this);
+  $('.reviews__item--active').removeClass('reviews__item--active');
+  $('.reviews__item-btn--active').removeClass('reviews__item-btn--active');
+  $('.reviews__item').eq(temp).addClass('reviews__item--active');
+  $(this).addClass('reviews__item-btn--active');
+});
+// const reviewsItemBtn = document.querySelectorAll('.reviews__item-btn');
+// const reviewsListBtns = document.querySelector('.reviews__list-btns');
+// reviewsListBtns.addEventListener('click', function(e) {
+//   reviewsItemBtn.forEach(i=0, i<reviewsItemBtn, i++){
+
+//   };
+//   console.log((e));
+//   console.log(e.target.parentNode);
+//   // console.log(reviewsItemBtn.indexOf(e.target));
+//   // e.target.parentNode
+//   // console.log([e.target.parentNode]);
+// })

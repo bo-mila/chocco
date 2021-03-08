@@ -2234,7 +2234,8 @@ address {
   border: 5px solid transparent;
   margin-right: 0.3125rem;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  cursor: pointer; }
   .reviews__item-btn:last-child {
     margin-right: 0; }
   .reviews__item-btn--active {
