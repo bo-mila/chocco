@@ -208,7 +208,38 @@ function right() {
 
 
 
+///////////////// FIXED-MENU  /////////////////////////////
+$('.fixed-menu__item').on('click', function(e) {
+  e.preventDefault();
+  elem = e.target;
+  let offset = 0;
+  if (elem.classList.contains('scrollToFirst')) {
+    offset = $('.first').offset().top;
+  } else if (elem.classList.contains('scrollToWhy')) {
+    offset = $('.why').offset().top;
+  } else if (elem.classList.contains('scrollToChocco')) {
+    offset = $('.chocco').offset().top;
+  } else if (elem.classList.contains('scrollToTeam')) {
+    offset = $('.team').offset().top;
+  } else if (elem.classList.contains('scrollToMenu')) {
+    offset = $('.menu').offset().top;
+  } else if (elem.classList.contains('scrollToReviews')) {
+    offset = $('.reviews').offset().top;
+  } else if (elem.classList.contains('scrollToHow-work')) {
+    offset = $('.how-work').offset().top;
+  } else if (elem.classList.contains('scrollToOrder')) {
+    offset = $('.order').offset().top;
+  } else if (elem.classList.contains('scrollToContacts')) {
+    offset = $('.contacts').offset().top;
+  } else {
+    return;
+  }
+  scrollToSection(offset);
+});
 
-
-
-/////////////////  SCROLL  /////////////////////////////
+function scrollToSection(offset) {
+  $('html, body').animate({
+    'scrollTop' : offset
+  }, 1000);
+  return;
+}
