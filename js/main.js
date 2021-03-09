@@ -267,3 +267,58 @@ $('.reviews__item-btn').on('click', function(e) {
 //   // e.target.parentNode
 //   // console.log([e.target.parentNode]);
 // })
+
+
+
+
+//////////////////  FORM  ///////////////////////////////
+const form = document.querySelector('.form');
+const buttonsRes = document.querySelector('.buttons__res');
+const buttonsSub = document.querySelector('.buttons__sub');
+
+buttonsRes.addEventListener('click', function(e) {
+  e.preventDefault();
+  form.reset();
+});
+buttonsSub.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('name', form.elements.name.value);
+  formData.append('phone', form.elements.phone.value);
+  formData.append('comment', form.elements.comment.value);
+  formData.append('to', 'mi@gmail.com');
+
+  if (validForm(form)) {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+    xhr.addEventListener('load', () => {
+      if ((xhr.response.status)|(xhr.response.status==0)) {
+        console.log(xhr.response.message);
+        form.reset(); 
+      }
+    });
+  }
+});
+
+function validForm(form) {
+  let valid = true;
+
+  if (!validField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validField(form.elements.comment)) {
+    valid = false;
+  }
+  return valid;
+}
+
+function validField(field) {
+  field.nextElementSibling.textContent = field.validationMessage;
+  return field.checkValidity();
+}

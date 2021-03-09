@@ -2825,3 +2825,6 @@ address {
 .tw__icon {
   width: 1.25rem;
   height: 1rem; }
+
+.error {
+  color: #365a49; }

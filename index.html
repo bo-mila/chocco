@@ -1031,10 +1031,12 @@
                 <label class="form__block">
                   <h6 class="form__subtitle">Имя</h6>
                   <input type="text" name="name" class="form__input" required autocomplete="off">
+                  <div class="error" aria-label="ошибка - не ввдено имя"></div>
                 </label>
                 <label class="form__block">
                   <h6 class="form__subtitle">Телефон</h6>
-                  <input type="text" name="tel" class="form__input" required autocomplete="off">
+                  <input type="text" name="phone" class="form__input" required autocomplete="off">
+                  <div class="error" aria-label="ошика - неправильно введен телефон"></div>
                 </label>
               </div>
               <div class="form__row">
@@ -1067,6 +1069,7 @@
                 <label class="form__block">
                   <h6 class="form__subtitle">Комментарий</h6>
                   <textarea name="comment" class="form__input form__input--textarea" required></textarea>
+                  <div class="error" aria-label="ошибка - нет комментария"></div>
                 </label>
               </div>
               <div class="form__row form__row--centered">
