@@ -322,3 +322,56 @@ function validField(field) {
   field.nextElementSibling.textContent = field.validationMessage;
   return field.checkValidity();
 }
+
+
+/////////////////////  VALIDATION OF PHONE FIELD  /////////////////////
+const formPhoneValid = document.querySelector('.phonevalid');
+// let valueReturn = '';
+// formPhoneValid.addEventListener('keydown', e => {
+//   let keyName = e.key;
+//   e.preventDefault();
+//   if (((keyName >= '0' && keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
+//     if (formPhoneValid.selectionStart != formPhoneValid.selectionEnd) {
+//       formPhoneValid.setRangeText('');
+//       valueReturn = formPhoneValid.value + keyName;
+//     } else {
+//       valueReturn = valueReturn + keyName;
+//     }
+//     return formPhoneValid.value = valueReturn;
+//   } else {
+//     if (keyName === "Backspace") {
+//       if (formPhoneValid.selectionStart != formPhoneValid.selectionEnd) {
+//         formPhoneValid.setRangeText('');
+//         valueReturn = formPhoneValid.value;
+//       } else {
+//         valueReturn = valueReturn.substring(0,valueReturn.length - 1);
+//       }
+//       return formPhoneValid.value = valueReturn;
+//     }
+//   }
+// });
+
+formPhoneValid.addEventListener('keydown', function(e) {
+  console.log(e.key);
+  let isDigit = false;
+  let isDash = false;
+  let isControl = false;
+  if (e.key >= 0 || e.key <= 9) {
+    isDigit = true;
+  }
+  if (e.key == '-') {
+    isDash = true;
+  }
+  if (e.key == 'ArrowLeft' ||
+      e.key == 'ArrowRight' ||
+      e.key == 'Backspace' ||
+      e.key == 'Delete') {
+    isControl = true;
+  }
+  if (!isDigit && !isDash && !isControl) {
+    e.preventDefault();
+  }
+});
+
+
+
