@@ -19,6 +19,9 @@ function noScroll() {
   window.scrollTo(0, 0);
 }
 
+
+
+
 /////////////// HAMBURGER ////////////////////////////////
 hamburgerMenu.addEventListener('click', function(e) {
   e.preventDefault;
@@ -34,6 +37,42 @@ hamburgerMenu.addEventListener('click', function(e) {
     window.removeEventListener('scroll', noScroll);
   }
 });
+hamburger.addEventListener('click', function(e) {
+  e.preventDefault();
+  elem = e.target;
+  let offset = 0;
+  if (elem.classList.contains('scrollToFirst')) {
+    offset = $('.first').offset().top;
+  } else if (elem.classList.contains('scrollToWhy')) {
+    offset = $('.why').offset().top;
+  } else if (elem.classList.contains('scrollToChocco')) {
+    offset = $('.chocco').offset().top;
+  } else if (elem.classList.contains('scrollToTeam')) {
+    offset = $('.team').offset().top;
+  } else if (elem.classList.contains('scrollToMenu')) {
+    offset = $('.menu').offset().top;
+  } else if (elem.classList.contains('scrollToReviews')) {
+    offset = $('.reviews').offset().top;
+  } else if (elem.classList.contains('scrollToHow-work')) {
+    offset = $('.how-work').offset().top;
+  } else if (elem.classList.contains('scrollToOrder')) {
+    offset = $('.order').offset().top;
+  } else if (elem.classList.contains('scrollToContacts')) {
+    offset = $('.contacts').offset().top;
+  } else {
+    return;
+  }
+  hamburger.style.display = "none";
+  headerContent.style.justifyContent = "space-between";
+  headerLogo.style.opacity = "1";
+  window.removeEventListener('scroll', noScroll);
+  hamburgerMenu.click();
+  setTimeout(function () {
+    scrollToSection(offset);
+  }, 200);
+})
+
+
 
 
 /////////////// ACCO VERTICAL IN TEAM /////////////////////////
@@ -244,6 +283,9 @@ function scrollToSection(offset) {
 
 
 
+
+
+
 ////////////////////// SLIDE-SHOW //////////////////////
 $('.reviews__item-btn').on('click', function(e) {
   if ($(this).hasClass('reviews__item-btn--active')) {
@@ -324,6 +366,10 @@ function validField(field) {
 }
 
 
+
+
+
+
 /////////////////////  VALIDATION OF PHONE FIELD  /////////////////////
 const formPhoneValid = document.querySelector('.phonevalid');
 // let valueReturn = '';
@@ -372,6 +418,9 @@ formPhoneValid.addEventListener('keydown', function(e) {
     e.preventDefault();
   }
 });
+
+
+
 
 
 

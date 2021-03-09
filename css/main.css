@@ -1006,7 +1006,8 @@ address {
   cursor: pointer;
   -webkit-transition: .6s;
   -o-transition: .6s;
-  transition: .6s; }
+  transition: .6s;
+  outline: none; }
   .btn--bg-green {
     background-color: #365a49;
     color: #fff; }
@@ -2034,6 +2035,7 @@ address {
   text-decoration: none;
   position: relative;
   background-size: cover;
+  outline: none;
   cursor: pointer; }
   .menu__name span {
     z-index: 6;

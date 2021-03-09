@@ -9,6 +9,8 @@
   display: flex;
   cursor: pointer;
   transition: .6s;
+  outline: none;
+
   &--bg-green {
     background-color: $green;
     color: $white;
