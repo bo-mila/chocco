@@ -19,6 +19,9 @@ function noScroll() {
   window.scrollTo(0, 0);
 }
 
+
+
+
 /////////////// HAMBURGER ////////////////////////////////
 hamburgerMenu.addEventListener('click', function(e) {
   e.preventDefault;
@@ -34,6 +37,42 @@ hamburgerMenu.addEventListener('click', function(e) {
     window.removeEventListener('scroll', noScroll);
   }
 });
+hamburger.addEventListener('click', function(e) {
+  e.preventDefault();
+  elem = e.target;
+  let offset = 0;
+  if (elem.classList.contains('scrollToFirst')) {
+    offset = $('.first').offset().top;
+  } else if (elem.classList.contains('scrollToWhy')) {
+    offset = $('.why').offset().top;
+  } else if (elem.classList.contains('scrollToChocco')) {
+    offset = $('.chocco').offset().top;
+  } else if (elem.classList.contains('scrollToTeam')) {
+    offset = $('.team').offset().top;
+  } else if (elem.classList.contains('scrollToMenu')) {
+    offset = $('.menu').offset().top;
+  } else if (elem.classList.contains('scrollToReviews')) {
+    offset = $('.reviews').offset().top;
+  } else if (elem.classList.contains('scrollToHow-work')) {
+    offset = $('.how-work').offset().top;
+  } else if (elem.classList.contains('scrollToOrder')) {
+    offset = $('.order').offset().top;
+  } else if (elem.classList.contains('scrollToContacts')) {
+    offset = $('.contacts').offset().top;
+  } else {
+    return;
+  }
+  hamburger.style.display = "none";
+  headerContent.style.justifyContent = "space-between";
+  headerLogo.style.opacity = "1";
+  window.removeEventListener('scroll', noScroll);
+  hamburgerMenu.click();
+  setTimeout(function () {
+    scrollToSection(offset);
+  }, 200);
+})
+
+
 
 
 /////////////// ACCO VERTICAL IN TEAM /////////////////////////
@@ -166,10 +205,8 @@ function left() {
   sliderArrowLeft.onclick = null;
   let sliderL = document.querySelectorAll('.slider__item');
   let offsetL = -1;
-  // console.log(offsetL)
   for (let i = 0; i<slideView+2; i++) {
     sliderL[i].style.left = (offsetL*100 - 100)/slideView + "%";
-    // console.log(offsetL*100 - 100);
     offsetL++;
   }
   slideNumberView++;
@@ -208,7 +245,224 @@ function right() {
 
 
 
+///////////////// FIXED-MENU  /////////////////////////////
+$('.fixed-menu__item').on('click', function(e) {
+  e.preventDefault();
+  elem = e.target;
+  let offset = 0;
+  if (elem.classList.contains('scrollToFirst')) {
+    offset = $('.first').offset().top;
+  } else if (elem.classList.contains('scrollToWhy')) {
+    offset = $('.why').offset().top;
+  } else if (elem.classList.contains('scrollToChocco')) {
+    offset = $('.chocco').offset().top;
+  } else if (elem.classList.contains('scrollToTeam')) {
+    offset = $('.team').offset().top;
+  } else if (elem.classList.contains('scrollToMenu')) {
+    offset = $('.menu').offset().top;
+  } else if (elem.classList.contains('scrollToReviews')) {
+    offset = $('.reviews').offset().top;
+  } else if (elem.classList.contains('scrollToHow-work')) {
+    offset = $('.how-work').offset().top;
+  } else if (elem.classList.contains('scrollToOrder')) {
+    offset = $('.order').offset().top;
+  } else if (elem.classList.contains('scrollToContacts')) {
+    offset = $('.contacts').offset().top;
+  } else {
+    return;
+  }
+  scrollToSection(offset);
+});
+
+function scrollToSection(offset) {
+  $('html, body').animate({
+    'scrollTop' : offset
+  }, 1000);
+  return;
+}
 
 
 
-/////////////////  SCROLL  /////////////////////////////
+
+
+
+////////////////////// SLIDE-SHOW //////////////////////
+$('.reviews__item-btn').on('click', function(e) {
+  if ($(this).hasClass('reviews__item-btn--active')) {
+    return;
+  }
+  let temp = $('.reviews__item-btn').index(this);
+  $('.reviews__item--active').removeClass('reviews__item--active');
+  $('.reviews__item-btn--active').removeClass('reviews__item-btn--active');
+  $('.reviews__item').eq(temp).addClass('reviews__item--active');
+  $(this).addClass('reviews__item-btn--active');
+});
+// const reviewsItemBtn = document.querySelectorAll('.reviews__item-btn');
+// const reviewsListBtns = document.querySelector('.reviews__list-btns');
+// reviewsListBtns.addEventListener('click', function(e) {
+//   reviewsItemBtn.forEach(i=0, i<reviewsItemBtn, i++){
+
+//   };
+//   console.log((e));
+//   console.log(e.target.parentNode);
+//   // console.log(reviewsItemBtn.indexOf(e.target));
+//   // e.target.parentNode
+//   // console.log([e.target.parentNode]);
+// })
+
+
+
+
+//////////////////  FORM  ///////////////////////////////
+const form = document.querySelector('.form');
+const buttonsRes = document.querySelector('.buttons__res');
+const buttonsSub = document.querySelector('.buttons__sub');
+
+buttonsRes.addEventListener('click', function(e) {
+  e.preventDefault();
+  form.reset();
+});
+buttonsSub.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('name', form.elements.name.value);
+  formData.append('phone', form.elements.phone.value);
+  formData.append('comment', form.elements.comment.value);
+  formData.append('to', 'mi@gmail.com');
+
+  if (validForm(form)) {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+    xhr.addEventListener('load', () => {
+      if ((xhr.response.status)|(xhr.response.status==0)) {
+        overlayMessage(xhr.response.message);
+        form.reset(); 
+      }
+    });
+  }
+});
+
+function validForm(form) {
+  let valid = true;
+
+  if (!validField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validField(form.elements.comment)) {
+    valid = false;
+  }
+  return valid;
+}
+
+function validField(field) {
+  field.nextElementSibling.textContent = field.validationMessage;
+  return field.checkValidity();
+}
+
+
+
+
+
+
+/////////////////////  VALIDATION OF PHONE FIELD  /////////////////////
+const formPhoneValid = document.querySelector('.phonevalid');
+// let valueReturn = '';
+// formPhoneValid.addEventListener('keydown', e => {
+//   let keyName = e.key;
+//   e.preventDefault();
+//   if (((keyName >= '0' && keyName <= "9") || (keyName ==='-')) && (valueReturn.length < 16)) {
+//     if (formPhoneValid.selectionStart != formPhoneValid.selectionEnd) {
+//       formPhoneValid.setRangeText('');
+//       valueReturn = formPhoneValid.value + keyName;
+//     } else {
+//       valueReturn = valueReturn + keyName;
+//     }
+//     return formPhoneValid.value = valueReturn;
+//   } else {
+//     if (keyName === "Backspace") {
+//       if (formPhoneValid.selectionStart != formPhoneValid.selectionEnd) {
+//         formPhoneValid.setRangeText('');
+//         valueReturn = formPhoneValid.value;
+//       } else {
+//         valueReturn = valueReturn.substring(0,valueReturn.length - 1);
+//       }
+//       return formPhoneValid.value = valueReturn;
+//     }
+//   }
+// });
+
+formPhoneValid.addEventListener('keydown', function(e) {
+  let isDigit = false;
+  let isDash = false;
+  let isControl = false;
+  if (e.key >= 0 || e.key <= 9) {
+    isDigit = true;
+  }
+  if (e.key == '-') {
+    isDash = true;
+  }
+  if (e.key == 'ArrowLeft' ||
+      e.key == 'ArrowRight' ||
+      e.key == 'Backspace' ||
+      e.key == 'Delete' ||
+      e.key == 'Tab') {
+    isControl = true;
+  }
+  if (!isDigit && !isDash && !isControl) {
+    e.preventDefault();
+  }
+});
+
+
+
+
+
+
+////////////////// OVERLAY  //////////////////////////
+const template = document.querySelector('#overlayTemp').innerHTML;
+const overlay = createOverlay(template);
+
+function createOverlay(template) {
+  let fragment = document.createElement('div');
+
+  fragment.innerHTML = template;
+
+  const overlayElement = fragment.querySelector('.overlay');
+  const contentElement = fragment.querySelector('.overlay__content');
+  const closeElement = fragment.querySelector('.overlay__close');
+
+  overlayElement.addEventListener('click', function(e) {
+    if (e.target === overlayElement) {
+      closeElement.click();
+      document.body.style.overflow = 'initial';
+    }
+  });
+  closeElement.addEventListener('click', function(e) {
+    document.body.removeChild(overlayElement);
+    document.body.style.overflow = 'initial';
+  });
+
+  return {
+    open() {
+      document.body.appendChild(overlayElement);
+    },
+    close() {
+      closeElement.click();
+    },
+    setContent(message) {
+      contentElement.innerHTML = message;
+    }
+  };
+}
+
+function overlayMessage(message) {   //////вызывается из функции формы после прихода ответа
+  overlay.open();
+  overlay.setContent(message);
+  document.body.style.overflow = 'hidden';
+}

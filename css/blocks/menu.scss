@@ -64,6 +64,8 @@
   text-decoration: none;
   position: relative;
   background-size: cover;
+  outline: none;
+
   cursor: pointer;
   & span {
     z-index: $z-menu-name;
