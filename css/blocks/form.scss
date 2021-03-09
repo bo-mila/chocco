@@ -69,6 +69,7 @@
   outline: none;
   padding: rem(11px) rem(22px);
   color: $black;
+  line-height: 1;
   @include tablets {
     padding: rem(5px) rem(8px)
   }

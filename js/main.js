@@ -296,7 +296,7 @@ buttonsSub.addEventListener('click', function(e) {
     xhr.send(formData);
     xhr.addEventListener('load', () => {
       if ((xhr.response.status)|(xhr.response.status==0)) {
-        console.log(xhr.response.message);
+        overlayMessage(xhr.response.message);
         form.reset(); 
       }
     });
@@ -352,7 +352,6 @@ const formPhoneValid = document.querySelector('.phonevalid');
 // });
 
 formPhoneValid.addEventListener('keydown', function(e) {
-  console.log(e.key);
   let isDigit = false;
   let isDash = false;
   let isControl = false;
@@ -365,7 +364,8 @@ formPhoneValid.addEventListener('keydown', function(e) {
   if (e.key == 'ArrowLeft' ||
       e.key == 'ArrowRight' ||
       e.key == 'Backspace' ||
-      e.key == 'Delete') {
+      e.key == 'Delete' ||
+      e.key == 'Tab') {
     isControl = true;
   }
   if (!isDigit && !isDash && !isControl) {
@@ -375,3 +375,45 @@ formPhoneValid.addEventListener('keydown', function(e) {
 
 
 
+////////////////// OVERLAY  //////////////////////////
+const template = document.querySelector('#overlayTemp').innerHTML;
+const overlay = createOverlay(template);
+
+function createOverlay(template) {
+  let fragment = document.createElement('div');
+
+  fragment.innerHTML = template;
+
+  const overlayElement = fragment.querySelector('.overlay');
+  const contentElement = fragment.querySelector('.overlay__content');
+  const closeElement = fragment.querySelector('.overlay__close');
+
+  overlayElement.addEventListener('click', function(e) {
+    if (e.target === overlayElement) {
+      closeElement.click();
+      document.body.style.overflow = 'initial';
+    }
+  });
+  closeElement.addEventListener('click', function(e) {
+    document.body.removeChild(overlayElement);
+    document.body.style.overflow = 'initial';
+  });
+
+  return {
+    open() {
+      document.body.appendChild(overlayElement);
+    },
+    close() {
+      closeElement.click();
+    },
+    setContent(message) {
+      contentElement.innerHTML = message;
+    }
+  };
+}
+
+function overlayMessage(message) {   //////вызывается из функции формы после прихода ответа
+  overlay.open();
+  overlay.setContent(message);
+  document.body.style.overflow = 'hidden';
+}
