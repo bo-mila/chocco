@@ -3141,12 +3141,45 @@ address {
   display: none; }
 
 .contacts {
-  background-image: url("../../img/bg/bg-contacts.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
   position: relative; }
+
+.map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden; }
+
+#map {
+  height: 100%;
+  width: 100%; }
+
+.map__hint {
+  padding: 20px;
+  min-height: 55px;
+  min-width: 195px;
+  font-size: 20px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #86c3d7;
+  border-radius: 20px; }
+
+.map__balloon {
+  padding: 20px;
+  font-size: 30px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #86c3d7;
+  border-radius: 20px; }
+
+.map__chocco-image {
+  float: right;
+  height: 100px;
+  width: 100px; }
 
 .footer {
   position: absolute;
