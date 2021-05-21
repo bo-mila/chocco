@@ -58,6 +58,9 @@
   @include tablets {
     margin-bottom: rem(48px);
   }
+  @include phones {
+    margin-bottom: rem(20px);
+  }
 }
 .team__list {
   display: flex;
@@ -95,6 +98,9 @@
         margin-bottom: rem(16px);
         transition: .6s;
       }
+      @include phones {
+        height: rem(184px);
+      }
     }
     & .team__info {
       height: 100%;
@@ -127,7 +133,9 @@
     opacity: 0;
     margin-bottom: 0;
   }
- 
+  @include phones {
+    width: rem(142px);
+  }
 }
 .team__photo {
   width: 100%;

@@ -18,9 +18,9 @@
   const menuItem = document.querySelectorAll(".menu__item");
   const menuItemLength = menuItem.length;
 
-  function noScroll() {
-    window.scrollTo(0, 0);
-  }
+  // function noScroll() {
+  //   window.scrollTo(0, 0);
+  // }
 
 
 

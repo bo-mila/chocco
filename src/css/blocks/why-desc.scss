@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  z-index: $z-why-desc;
   @include phones {
     flex-direction: row;
     align-items: center;
@@ -42,6 +43,9 @@
   line-height: 1;
   margin-bottom: rem(25px);
   color: $black;
+  @include phones {
+    margin-bottom: rem(10px);
+  }
 }
 .why-desc__text {
   @include alegreya-sans(light);

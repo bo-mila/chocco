@@ -12,6 +12,9 @@
   position: absolute;
   top: 10%;
   left: 5%;
+  @include phones {
+    left: 2%;
+  }
 }
 .menu__acc {
   position: absolute;

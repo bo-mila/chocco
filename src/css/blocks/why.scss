@@ -59,7 +59,9 @@
     width: 62%;
   }
   @include phones {
-    width: 88%;
+    width: 95%;
+    margin-bottom: rem(10px);
+
   }
 }
 .why__list {
@@ -92,9 +94,13 @@
     &::after {
       display: none;
     }
+    @include phones {
+      width: 88%;
+      margin-bottom: 0;
+    }
   }
   @include phones {
     width: 88%;
-    margin-bottom: rem(40px);
+    margin-bottom: rem(20px);
   }
 }
