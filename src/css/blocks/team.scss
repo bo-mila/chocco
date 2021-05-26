@@ -1,0 +1,192 @@
+.team {
+  background-color: $white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7%;
+    right: 1%;
+    display: block;
+    background-image: url("../../img/icons/barry-bef-team.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: rem(135px);
+    height: rem(112px);
+    @include tablets {
+      width: rem(102px);
+      height: rem(85px);
+      right: -1%;
+    }
+    @include phones {
+      right: -3%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -7%;
+    left: 1%;
+    display: block;
+    background-image: url("../../img/icons/barry-af-team.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: rem(104px);
+    height: rem(114px);
+    @include tablets {
+      width: rem(83px);
+      height: rem(90px);
+    }
+  }
+}
+.team__container {
+  height: 100%;
+  display: flex;
+}
+.team__content {
+  margin: 0 auto;
+  padding-top: 10%;
+  z-index: $z-content;
+  @include phones {
+    padding-top: 20%;
+  }
+}
+.team__title {
+  margin-bottom: rem(57px);
+  text-align: center;
+  @include tablets {
+    margin-bottom: rem(48px);
+  }
+  @include phones {
+    margin-bottom: rem(20px);
+  }
+}
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  @include tablets {
+    margin: 0 auto;
+    width: 75%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+.team__item {
+  width: calc(100% / 4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include tablets {
+    width: 100%;
+    margin-bottom: rem(15px);
+  }
+  &:nth-child(even) {
+    padding-top: rem(40px);
+    @include tablets {
+      padding-top: 0;
+    }
+  }
+  &--active {
+    & .team__avatar {
+      @include tablets {
+        height: rem(288px);
+        opacity: 1;
+        margin-bottom: rem(16px);
+        transition: .6s;
+      }
+      @include phones {
+        height: rem(184px);
+      }
+    }
+    & .team__info {
+      height: 100%;
+      opacity: 1;
+      transition: .6s;
+    }
+    & .team__name {
+      &::after {
+        border: rem(4px) solid transparent;
+        border-bottom-width: rem(6px);
+        border-bottom-color: $green;
+        border-top: 0;
+      }
+    }
+  }
+}
+.team__avatar {
+  width: 94%;
+  height: 66%;
+  min-height: rem(288px);
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(26px);
+  @include tablets {
+    width: rem(224px);
+    min-height: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .01s;
+    opacity: 0;
+    margin-bottom: 0;
+  }
+  @include phones {
+    width: rem(142px);
+  }
+}
+.team__photo {
+  width: 100%;
+  // height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.team__name {
+  @include alegreya-sans(bold);
+  font-size: rem(21px);
+  margin-bottom: rem(13px);
+  color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &::after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: rem(4px) solid transparent;
+    border-top-width: rem(6px);
+    border-top-color: $green;
+    border-bottom: 0;
+    margin-left: rem(5px);
+  }
+  @include tablets {
+    order: -1;
+  }
+}
+.team__info {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: .6s;
+  opacity: 0;
+  @include tablets {
+    width: 100%;
+    transition: .01s;
+  }
+}
+.team__occ {
+  @include alegreya-sans(normal);
+  font-size: rem(18px);
+  color: $black;
+  margin-bottom: rem(5px);
+}
+.team__desc {
+  @include alegreya-sans(light);
+  font-size: rem(18px);
+  color: $grey;
+  
+}

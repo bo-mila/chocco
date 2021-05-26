@@ -1,0 +1,53 @@
+.how-work {
+  background-color: $light-light-grey;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -13%;
+    left: 0%;
+    display: block;
+    background-image: url("../../img/icons/barry-af-reviews.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: $z-bef-af-section;
+    width: rem(135px);
+    height: rem(193px);
+    @include tablets {
+      left: -4%;
+    }
+  }
+}
+.how-work__container {
+  height: 100%;
+  display: flex;
+}
+.how-work__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.how-work__title {
+  margin-bottom: rem(44px);
+  @include phones {
+    margin-bottom: rem(35px);
+  }
+}
+.how-work__player {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  width: 70%;
+  height: 54%;
+  @include tablets {
+    width: 95%;
+    height: 56%;
+  }
+  @include phones {
+    height: 38%;
+  }
+}

@@ -1,0 +1,6 @@
+.address {
+  color: $black;
+  @include phones {
+    text-align: center;
+  }
+}

@@ -1,0 +1,19 @@
+.phone {
+  @include alegreya-sans (normal);
+  font-size: rem(24px);
+  display: flex;
+  align-items: center;
+  @include tablets {
+    display: none;
+  }
+}
+.phone__number {
+  display: flex;
+  align-items: center;
+}
+.phone__icon {
+    width: rem(12px);
+    height: rem(11px);
+    margin-right: rem(4px);
+    fill: $white;
+}

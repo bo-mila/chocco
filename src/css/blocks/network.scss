@@ -1,0 +1,21 @@
+.network {
+  display: flex;
+  align-items: center;
+}
+.network__item {
+  margin-right: rem(20px);
+  transition: .6s;
+  opacity: .3;
+  display: flex;
+  align-items: center;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+.network__ref {
+  display: flex;
+  align-items: center;
+}
