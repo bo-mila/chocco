@@ -28,6 +28,9 @@
     width: rem(90px);
     height: rem(90px);
   }
+  @include phones {
+    padding: rem(38px) rem(20px) rem(17px);
+  }
 }
 .review__avatar {
   margin-right: rem(20px);

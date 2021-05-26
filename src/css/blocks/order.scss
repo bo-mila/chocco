@@ -78,5 +78,6 @@
   }
   @include phones {
     text-align: center;
+    margin-bottom: rem(5px);
   }
 }

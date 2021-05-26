@@ -19,6 +19,9 @@
       height: rem(79px);
       right: -5%;
     }
+    @include phones {
+      top: 2%;
+    }
   }
   &::after {
     content: "";
@@ -56,6 +59,9 @@
 .reviews__title {
   margin-bottom: rem(44px);
   z-index: $z-title-reviews;
+  @include phones {
+    margin-bottom: rem(10px);
+  }
 }
 .reviews__list {
   display: flex;

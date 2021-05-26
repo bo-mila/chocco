@@ -21,6 +21,9 @@
     margin-right: 0;
     margin-bottom: rem(20px);
   }
+  @include phones {
+    margin-bottom: rem(5px);
+  }
   &:last-child {
     margin-right: 0;
     @include tablets {
@@ -33,7 +36,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   margin-bottom: rem(20px);
-
+  @include phones {
+    margin-bottom: rem(5px);
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -42,7 +47,7 @@
       justify-content: center;
     }
   }
-
+  
 }
 .form__block {
   flex: 1;
